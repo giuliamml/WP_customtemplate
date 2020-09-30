@@ -13,9 +13,11 @@
 <body>
 <?php get_header(); ?>
 
-    <div class='error-page-container'>
-    <h1>page not found</h1>
-    
-    </div>
+ <div class='error-page-container'>
+	<h1>page not found <br><span class='animation'></span><span class='animation'></span><span class='animation'></span></h1>
+	
+ </div>
+
+	
 </body>
 </html>
