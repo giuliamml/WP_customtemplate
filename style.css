@@ -15,13 +15,19 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* 
+yellow:#fbf5e2
+pink: #f5e2fb
+lilac: #e9e2fb 
+*/
+
 body {
   margin: 0;
   height: 100%;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 25% 75%;
-  background-color: #faedcb;
+  grid-template-columns: 20% 80%;
+  background-color: black;
   font-family: "IBM Plex Mono", monospace;
   height: 100vh;
 }
@@ -30,6 +36,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
+  color: #fbf5e2;
 }
 
 .menu-main-menu-container {
@@ -38,7 +45,7 @@ h1 {
 }
 
 header {
-  border-right: 1px solid black;
+  border-right: 1px solid #fbf5e2;
 }
 
 header a {
@@ -54,9 +61,10 @@ header a {
   top: 50%;
 }
 
-.header-container h1{
+.header-container h1 {
   text-align: center;
   text-transform: none;
+  font-size: 4rem;
 }
 
 ul {
@@ -79,7 +87,7 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #e9e2fb;
   font-size: 0.8rem;
   position: relative;
   cursor: pointer;
@@ -88,13 +96,15 @@ a {
 h2 {
   margin-bottom: 0;
   z-index: 1111111;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  color: #f5e2fb;
 }
 
-h3{
+h3 {
   font-size: 1.2rem;
   font-weight: lighter;
   text-align: center;
+  color: #e9e2fb;
 }
 p.post-date {
   font-style: italic;
@@ -106,6 +116,8 @@ p {
   font-size: 0.6rem;
   margin: 0;
   text-align: justify;
+  letter-spacing: 0.0625em;
+  color: #fbf5e2;
 }
 
 .title {
@@ -113,7 +125,7 @@ p {
   flex-direction: column;
   width: 100%;
   position: relative;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fbf5e2;
   align-items: center;
 }
 .title p {
@@ -123,16 +135,17 @@ p {
 .posts-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fbf5e2;
 }
 
-.single-post {
-  padding: 0 3%;
+.single-post-homepage {
+  padding: 0 5%;
   display: grid;
 }
 
-.single-post > a {
+.single-post-homepage > a {
   background-color: transparent;
+  overflow: hidden;
 }
 
 img {
@@ -146,10 +159,19 @@ img {
 img.thumbnail-img {
   width: 100%;
   height: 100%;
+  left: 0;
+  transform: none;
+  padding: 0;
 }
+
+img.thumbnail-img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 hr {
   width: 100%;
-  background-color: black;
+  background-color: #fbf5e2;
   height: 1px;
   border: none;
 }
@@ -162,16 +184,21 @@ button {
   float: right;
 }
 
+button:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
 a.tag-link {
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #ff499e;
   width: max-content;
+  margin-bottom: 5%;
 }
 
 .page-content-wrapper,
 .single-post-content,
 .single-project-content {
-  margin: 2%;
   height: 100vh;
   overflow-y: scroll;
   width: 100%;
@@ -183,10 +210,9 @@ a.tag-link {
   transform: translateY(-50%);
   text-align: right;
   right: 5%;
-  background-color: #faedcb;
-  border: 1px solid black;
+  background-color: black;
+  border: 1px solid #fbf5e2;
   padding: 1%;
-  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .single-post-title-text p,
@@ -204,7 +230,8 @@ h1 {
 }
 
 .single-post-content img {
-  padding: 0;
+  padding-left: 8%;
+  padding-top: 8%;
   left: 0;
   transform: none;
   height: 80%;
@@ -214,32 +241,30 @@ h1 {
 }
 .content-paragraph p {
   margin: 5% 20%;
-
 }
-.single-post-content hr{
-  width:20%;
-  margin-top:5%;
+.single-post-content hr {
+  width: 20%;
+  margin-top: 5%;
 }
 
-.single-filtered-post{
-  width:100%;
+.single-filtered-post {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fbf5e2;
 }
 
-.single-filtered-post h1{
+.single-filtered-post h1 {
   text-align: left;
   padding: 5% 0;
 }
-.single-filtered-post img{
-  padding:0;
-  left:5%;
+.single-filtered-post img {
+  padding: 0;
+  left: 5%;
   height: 90%;
   position: relative;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
-  
 }
 
 .category-container p {
@@ -251,8 +276,24 @@ h1 {
   overflow-y: scroll;
 }
 
+.page-content-wrapper {
+  margin: 0;
+}
+.page-content-wrapper p {
+  padding: 20%;
+}
+
+.page-content-wrapper h1 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.page-content-wrapper hr {
+  width: 20%;
+}
+
 .error-page-container {
-  background-color: #faedcb;
+  background-color: black;
   width: 100%;
   height: 100%;
 }
@@ -314,7 +355,7 @@ h1 {
   left: 70%;
   position: absolute;
   z-index: 11111;
-  background-color: #faedcb;
+  background-color: black;
   padding: 1%;
 }
 

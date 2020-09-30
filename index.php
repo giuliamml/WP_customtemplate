@@ -28,7 +28,7 @@ while (have_posts()) : the_post();
       while ($query->have_posts()) : $query->the_post();
       ?>
 
-        <div class="single-post">
+        <div class="single-post-homepage">
           <p class='post-date'><?php the_time('F j, Y') ?></p>
 
           <?php
