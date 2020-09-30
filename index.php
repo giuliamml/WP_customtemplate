@@ -7,7 +7,12 @@ while (have_posts()) : the_post();
 ?>
 
   <div class='page-container'>
-    <h1><?php the_title(); ?></h1>
+    <!-- <h1><?php the_title(); ?></h1> -->
+    <div class='title'>
+      <h1>JOURNAL</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
 
     <div class='posts-container'>
       <?php
@@ -25,6 +30,16 @@ while (have_posts()) : the_post();
 
         <div class="single-post">
           <p class='post-date'><?php the_time('F j, Y') ?></p>
+
+          <?php
+          $tag_terms = get_the_terms(get_the_id(), 'post_tag');
+          if($tag_terms) {
+          foreach($tag_terms as $tag_term) {
+          echo "<a class='tag-link' href='" . get_term_link($tag_term) . "'>" . "#". $tag_term->name . "</a> ";
+            }
+           }
+         ?>
+     
           <?php if (has_post_thumbnail()) {
 
           ?>
@@ -39,10 +54,11 @@ while (have_posts()) : the_post();
           ?>
           <div class='post-details'>
           <h2><?php the_title(); ?></h2>
+  
           <div class='excerpt-container'><?php the_excerpt(); ?></div>
           <button><a href="<?php the_permalink(); ?>">read more ></a></button>
         </div>
-          <hr>
+        
         </div>
 
       <?php

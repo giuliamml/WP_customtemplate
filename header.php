@@ -15,7 +15,7 @@
 
     <header>
 		<div class='header-container'>
-		<h1>blog name</h1>
+		<a href="<?php echo home_url(); ?>"><h1><?php echo get_bloginfo(); ?></h1>
 	
 			<ul class='nav-list'>
 				<?php echo wp_nav_menu('Main Menu'); ?>
