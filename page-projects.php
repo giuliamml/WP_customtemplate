@@ -7,7 +7,9 @@ while (have_posts()) : the_post();
 ?>
 
   <div class='page-container'>
+    <div class='title'>
     <h1><?php the_title(); ?></h1>
+</div>
 
     <div class='posts-container'>
       <?php
@@ -29,7 +31,7 @@ while (have_posts()) : the_post();
 
           ?>
           <a href="<?php the_permalink(); ?>">
-            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'medium'); ?>' />
+            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
           <?php
@@ -37,9 +39,9 @@ while (have_posts()) : the_post();
             echo  "<p class=''>no image found</p>";
           }
           ?>
-          <div class='project-details'>
+        <div class='project-details'>
           <h2><?php the_title(); ?></h2>
-          <div class='excerpt-container'><?php the_excerpt(); ?></div>
+          <!-- <div class='excerpt-container'><?php the_excerpt(); ?></div> -->
           <button><a href="<?php the_permalink(); ?>">view more ></a></button>
         </div>
           

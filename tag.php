@@ -36,7 +36,7 @@
   <p><?php echo get_the_date(); ?></p>
   <h1><?php the_title(); ?></h1>
   <div><?php the_excerpt(); ?></div>
-  <a href="<?php echo get_the_permalink(); ?>">Read article ></a>
+  <a href="<?php echo get_the_permalink(); ?>"><button>Read article ></button></a>
   <hr>
 </div>
 </div>

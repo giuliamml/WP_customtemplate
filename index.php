@@ -10,7 +10,6 @@ while (have_posts()) : the_post();
     <!-- <h1><?php the_title(); ?></h1> -->
     <div class='title'>
       <h1>JOURNAL</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
     </div>
 
 
@@ -44,7 +43,7 @@ while (have_posts()) : the_post();
 
           ?>
           <a href="<?php the_permalink(); ?>">
-            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'medium'); ?>' />
+            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
           <?php
