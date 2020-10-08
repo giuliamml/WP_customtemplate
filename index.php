@@ -2,16 +2,14 @@
 
 <?php get_header(); ?>
 
+<div class='page-container'>
+  <div class='title'>
+      <h1>JOURNAL</h1>
+  </div>
+
 <?php
 while (have_posts()) : the_post();
 ?>
-
-  <div class='page-container'>
-    <!-- <h1><?php the_title(); ?></h1> -->
-    <div class='title'>
-      <h1>JOURNAL</h1>
-    </div>
-
 
     <div class='posts-container'>
       <?php
@@ -65,10 +63,11 @@ while (have_posts()) : the_post();
       wp_reset_postdata();
       ?>
     </div>
-  </div>
+  
 
 <?php
 endwhile;
 ?>
+</div>
 
 <?php get_footer(); ?>

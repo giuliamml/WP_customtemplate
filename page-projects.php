@@ -40,7 +40,19 @@ while (have_posts()) : the_post();
           }
           ?>
         <div class='project-details'>
+
+        <?php
+            $project_terms = get_the_terms(get_the_id(), 'project-type');
+             if($project_terms) {
+           
+              foreach($project_terms as $project_term) {
+              echo "<a href='" . get_term_link($project_term) . "'>". "#". $project_term->name . "</a> ";
+           }
+          }
+         ?>
+
           <h2><?php the_title(); ?></h2>
+
           <!-- <div class='excerpt-container'><?php the_excerpt(); ?></div> -->
           <button><a href="<?php the_permalink(); ?>">view more ></a></button>
         </div>

@@ -15,7 +15,7 @@
 
     <header>
 		<div class='header-container'>
-		<a href="<?php echo home_url(); ?>"><h1><span class='animation'></span><?php echo get_bloginfo(); ?></h1>
+		<a href="https://giuliamummolo.com/"><h1><span class='animation'></span><?php echo get_bloginfo(); ?></h1>
 	
 			<ul class='nav-list'>
 				<?php echo wp_nav_menu('Main Menu'); ?>
