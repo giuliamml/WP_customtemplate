@@ -141,6 +141,9 @@ add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
-
+function new_excerpt_more( $more ) {
+  return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

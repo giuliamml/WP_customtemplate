@@ -55,9 +55,10 @@
   echo "no image found";
 }
 ?>
-<hr>
+<!-- <?php the_excerpt(); ?>
+<hr> -->
 <div class='content-paragraph'>
-  <?php the_content(); ?>
+<?php the_content();?> 
 </div>
 
 <hr>

@@ -23,7 +23,6 @@ pink: #f5e2fb
 lilac: #e9e2fb 
 --------------*/
 
-
 /* -----BASE SETTINGS---- */
 
 body {
@@ -79,6 +78,11 @@ p {
   color: #fbf5e2;
 }
 
+blockquote h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 img {
   padding: 5% 0;
   left: 50%;
@@ -110,15 +114,13 @@ button:hover {
 
 /* ----- MAIN MENU SETTINGS---- */
 
-
 .menu-main-menu-container {
   width: 100%;
-  padding:0;
-
+  padding: 0;
 }
 
-ul#menu-main-menu{
-  padding:0;
+ul#menu-main-menu {
+  padding: 0;
 }
 
 header {
@@ -146,7 +148,6 @@ header a {
   font-size: 4rem;
 }
 
-
 ul.nav-list {
   flex-direction: column;
   display: flex;
@@ -154,7 +155,6 @@ ul.nav-list {
   width: 100%;
   text-align: center;
   padding-left: 0;
-  
 }
 
 /*------ HOMEPAGE POST SETTINGS -------*/
@@ -182,7 +182,6 @@ p.post-date {
 .posts-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid #fbf5e2;
   padding: 1%;
   height: 90%;
 }
@@ -228,6 +227,7 @@ a.tag-link {
   height: 100vh;
   overflow-y: scroll;
   width: 100%;
+  position: relative;
 }
 
 .single-post-title-text {
@@ -239,12 +239,14 @@ a.tag-link {
   background-color: black;
   border: 1px solid #fbf5e2;
   padding: 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 .single-post-title-text p,
 h1 {
-  padding-bottom: 1%;
-  padding-top:1%;
+  padding-bottom: 0%;
+  padding-top: 1%;
   text-align: right;
   padding-left: 0%;
   padding-right: 0%;
@@ -257,6 +259,8 @@ h1 {
 
 .single-post-title-text a {
   background-color: #ff499e;
+  width: max-content;
+  font-size: 1rem;
 }
 
 .single-post-content img {
@@ -270,7 +274,8 @@ h1 {
   width: 100%;
 }
 .content-paragraph p {
-  margin: 5% 20%;
+  margin: 2% 20%;
+  font-size: 0.7rem;
 }
 .single-post-content hr {
   width: 20%;
@@ -302,7 +307,6 @@ h1 {
 .category-container p {
   display: inline;
 }
-
 
 /*----- PAGE SETTINGS -----*/
 
@@ -341,7 +345,6 @@ h1 {
   height: 50%;
 }
 
-
 /*---- ERROR PAGE SETTINGS -----*/
 
 .error-page-container {
@@ -356,7 +359,6 @@ h1 {
   top: 50%;
   font-size: 3rem;
 }
-
 
 /*---- CIRCLE ANIMATION SETTINGS ----*/
 
@@ -397,7 +399,6 @@ span#single-post {
   height: 5px;
   width: 5px;
 }
-
 
 /*---- SINGLE PROJECT SETTINGS ----*/
 
