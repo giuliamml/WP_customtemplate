@@ -15,12 +15,12 @@
 
     <header>
 		<div class='header-container'>
-		<a href="https://giuliamummolo.com/"><h1><span class='animation'></span><?php echo get_bloginfo(); ?></h1>
-	
-			<ul class='nav-list'>
+		<a href="https://giuliamummolo.com/"><h1><span class='animation'></span><?php echo get_bloginfo(); ?></h1></a>
+	    <p>a journal on fashion design, sustainability and tech<br> by GIULIA MUMMOLO</p>
+			<!-- <ul class='nav-list'>
 				<?php echo wp_nav_menu('Main Menu'); ?>
 				
-			</ul>
+			</ul> -->
 		</div>
 	</header>
 

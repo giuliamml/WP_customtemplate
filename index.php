@@ -5,13 +5,14 @@
 <div class='page-container'>
   <div class='title'>
       <h1>JOURNAL</h1>
-  </div>
+</div>
 
+<div class='posts-container'>
 <?php
 while (have_posts()) : the_post();
 ?>
 
-    <div class='posts-container'>
+   
       <?php
       $args = array(
         'post_type' => array('post'),
@@ -62,7 +63,7 @@ while (have_posts()) : the_post();
       endwhile;
       wp_reset_postdata();
       ?>
-    </div>
+    
   
 
 <?php
