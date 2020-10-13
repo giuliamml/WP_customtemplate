@@ -134,6 +134,7 @@ header a {
   background-color: transparent;
   font-size: 0.7rem;
   text-transform: uppercase;
+  padding-bottom: 5%;
 }
 
 .header-container {
@@ -191,8 +192,6 @@ p.post-date {
 .posts-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 1%;
-  height: 90%;
 }
 
 .single-post-homepage {
@@ -225,8 +224,8 @@ a.tag-link {
   font-size: 1.2rem;
   background-color: #ff499e;
   width: max-content;
-  margin-bottom: 5%;
-  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .page-custom-content-wrapper,
