@@ -25,7 +25,7 @@ while (have_posts()) : the_post();
       while ($query->have_posts()) : $query->the_post();
       ?>
 
-        <div class="single-project">
+        <div class="single-project-page">
           
           <?php if (has_post_thumbnail()) {
 

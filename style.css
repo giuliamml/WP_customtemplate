@@ -152,7 +152,7 @@ header a {
   font-size: 4rem;
 }
 
-header p{
+header p {
   text-align: center;
   text-transform: none;
   font-size: 0.6rem;
@@ -186,7 +186,7 @@ p.post-date {
 }
 
 .title h1 {
-  padding-top:0;
+  padding-top: 0;
 }
 
 .posts-container {
@@ -410,31 +410,31 @@ span#single-post {
 
 /*---- SINGLE PROJECT SETTINGS ----*/
 
-.single-project {
+.single-project-page {
   margin: 3%;
   display: grid;
   position: relative;
 }
 
-.single-project a {
+.single-project-page a {
   background-color: transparent;
   overflow: hidden;
 }
 
-.single-project:hover .project-details {
+.single-project-page:hover .project-details {
   display: block;
   position: absolute;
   bottom: 5%;
   left: 5%;
 }
 
-.single-project:hover {
+.single-project-page:hover {
   -webkit-box-shadow: 5px 5px 5px 0px rgba(245, 226, 251, 0.8);
   -moz-box-shadow: 5px 5px 5px 0px rgba(245, 226, 251, 0.8);
   box-shadow: 5px 5px 5px 0px rgba(245, 226, 251, 0.8);
 }
 
-.single-project:hover img {
+.single-project-page:hover img {
   opacity: 0.5;
 }
 
@@ -453,13 +453,17 @@ span#single-post {
 }
 
 .single-project-details {
-  width: 30%;
-  top: 30%;
-  left: 70%;
-  position: absolute;
+  width: 100%;
+  position: relative;
   z-index: 11111;
   background-color: black;
-  padding: 1%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  top:50%;
+  transform: translateY(-50%);
+  margin:0 1%;
+  border:1px solid #fbf5e2;
 }
 
 .single-project-details p:nth-of-type(1) {
@@ -468,10 +472,14 @@ span#single-post {
 
 .single-project-details h1 {
   text-align: left;
+  padding: 0 1%;
+  top: 0;
+  transform: none;
 }
 
-.single-project-details img {
-  position: absolute;
+.single-project-details a,p {
+  padding: 1%;
+  display: inline;
 }
 
 .project-gallery {
@@ -481,15 +489,36 @@ span#single-post {
   justify-content: space-evenly;
 }
 
-.project-gallery img {
-  height: 100%;
+img#project_gallery{
+  margin-top:0;
+  margin-left:0;
+  padding:1%;
+  transform: none;
 }
 
-.slider {
-  position: relative;
-}
 
 .single-project-content img {
-  padding: 0%;
-  margin-bottom: 5%;
+  position: relative;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  padding: 0;
+  height: 80%;
+  margin-left:5%;
+}
+
+.single-project-details-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100vh;
+}
+.single-project-description{
+  margin:0 15%;
+}
+.single-project-description hr{
+  width: 30%;
+  margin-bottom:5%;
+  margin-top:5%;
+  
 }
