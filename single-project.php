@@ -5,8 +5,9 @@
 ?>
 <div class='single-project-content'>
   <div class='single-project-details-wrapper'>
+    <div class='single-project-details-img'>
 <img src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large');?>'/>
-
+</div>
 
 <div class='single-project-details'>
 <h1><?php the_title(); ?></h1>
