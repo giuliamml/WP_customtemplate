@@ -11,7 +11,7 @@
 
 <div class='single-project-details'>
 <h1><?php the_title(); ?></h1>
-<p>Project description: <?php the_field('subtitle') ?></p>
+<p><?php the_field('subtitle') ?></p>
 
 
 <hr>

@@ -15,12 +15,30 @@
 
     <header>
 		<div class='header-container'>
-		<a href="https://giuliamummolo.com/"><h1><span class='animation'></span><?php echo get_bloginfo(); ?></h1></a>
-	    <p>a journal on fashion design, sustainability and tech<br> by GIULIA MUMMOLO</p>
+		<a id='blog-name' href="https://giuliamummolo.com/"><span class='animation'></span><?php echo get_bloginfo(); ?></a>
+		<a href='https://giuliamummolo.com/'>home</a>
+		<a href='http://journal.giuliamummolo.com/journal/'>journal</a>
+	    <p>a collection of writings on fashion design, sustainability and tech<br> by GIULIA MUMMOLO</p>
 			<!-- <ul class='nav-list'>
 				<?php echo wp_nav_menu('Main Menu'); ?>
 				
 			</ul> -->
 		</div>
+
+		<div class='header-container-mobile'>
+		<div id="burger-menu-container" onclick="myFunction(this)">
+         <div class="bar1"></div>
+         <div class="bar2"></div>
+         <div class="bar3"></div>
+		
+		<div class='burger-menu-items'>
+			<a href='https://giuliamummolo.com/'>home</a>
+			<a href='http://journal.giuliamummolo.com/journal/'>journal</a>
+		</div>
+		</div> 
+		<h1>journal</h1>
+		<p>a collection of writings on fashion design, sustainability and tech by GIULIA MUMMOLO</p>
+		</div>
+
 	</header>
 

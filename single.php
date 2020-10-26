@@ -9,7 +9,6 @@
   <img src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large');?>'/>
 
   <div class='single-post-title-text'>
-   <p><?php the_time('j.m.y') ?></p>
    <h1><?php the_title(); ?></h1>
    <!-- tags loop -->
     <?php
@@ -18,7 +17,7 @@
 
     if($tag_terms) {
       foreach($tag_terms as $tag_term) {
-        echo "<a href='" . get_term_link($tag_term) . "'>" . '#'. $tag_term->name . "</a> ";
+        echo "<a class='tag-link' href='" . get_term_link($tag_term) . "'>" . '#'. $tag_term->name . "</a> ";
         // print_r($tag_term);
       }
     }
@@ -58,6 +57,7 @@
 <!-- <?php the_excerpt(); ?>
 <hr> -->
 <div class='content-paragraph'>
+<p id='date'><?php the_time('j.m.y') ?></p>
 <?php the_content();?> 
 </div>
 
