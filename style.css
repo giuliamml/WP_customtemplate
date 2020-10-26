@@ -113,7 +113,7 @@ button:hover {
 }
 
 /* ----- MAIN MENU SETTINGS---- */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .menu-main-menu-container {
     width: 100%;
     padding: 0;
@@ -542,7 +542,7 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 699px) {
   body {
     display: flex;
     flex-direction: column;
@@ -569,13 +569,14 @@ button:hover {
 
   .header-container-mobile h1 {
     margin: 0;
+    padding-bottom: 2%;
   }
 
   #burger-menu-container {
     display: inline-block;
     cursor: pointer;
     position: absolute;
-    top:5%;
+    top:20%;
     padding-left: 2%;
     background-color: black;
   }
@@ -612,7 +613,7 @@ button:hover {
 
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-3px, -9px);
+    transform: rotate(45deg) translate(0px, -10px);
   }
 
   .title {
@@ -634,6 +635,7 @@ button:hover {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 90vh;
   }
 
   .single-post-homepage a:nth-of-type(2) {
