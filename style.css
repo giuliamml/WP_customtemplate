@@ -635,7 +635,6 @@ button:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 90vh;
   }
 
   .single-post-homepage a:nth-of-type(2) {
