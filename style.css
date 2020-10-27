@@ -549,6 +549,18 @@ button:hover {
     overflow: scroll;
   }
 
+  h2 {
+    z-index: 0;
+  }
+
+  button {
+    text-align: end;
+  }
+  button:hover{
+    transform: none;
+    transition: none;
+  }
+
   header {
     position: sticky;
     top: 0;
@@ -576,12 +588,11 @@ button:hover {
     display: inline-block;
     cursor: pointer;
     position: absolute;
-    top:20%;
     padding-left: 2%;
     background-color: black;
   }
 
-  .burger-menu-items{
+  .burger-menu-items {
     display: none;
   }
 
@@ -626,19 +637,20 @@ button:hover {
     padding: 2% 0;
   }
 
-  .page-container{
+  .page-container {
     display: flex;
     flex-direction: column;
   }
 
   .single-post-homepage {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2% 8% 60% 25%;
+    height: max-content;
   }
 
   .single-post-homepage a:nth-of-type(2) {
-    height: 400px;
+    height: 300px;
     padding: 2% 0;
   }
 
@@ -646,13 +658,21 @@ button:hover {
     height: 100%;
     padding: 0;
   }
+  .post-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .post-details h2,
+  p {
+    text-align: center;
+  }
   a.tag-link {
     font-size: 1.2rem;
     background-color: #ff499e;
     width: max-content;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 3%;
   }
 
   .single-post-content {
@@ -665,6 +685,9 @@ button:hover {
   }
   .content-paragraph {
     padding: 2% 10%;
+  }
+  .post-date {
+    text-align: start;
   }
   p#date {
     padding: 2% 0;
