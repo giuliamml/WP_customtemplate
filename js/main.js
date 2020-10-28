@@ -11,5 +11,7 @@ function myFunction(x) {
     burgerMenuItems.style.flexDirection = 'column';
     burgerMenuItems.style.width = '50vw';
     burgerMenuItems.style.height = '100vh';
+    burgerMenuItems.style.marginTop = '20%';
+
   }
 }

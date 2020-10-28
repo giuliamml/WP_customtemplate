@@ -32,8 +32,15 @@
          <div class="bar3"></div>
 		
 		<div class='burger-menu-items'>
-			<a href='https://giuliamummolo.com/'>home</a>
-			<a href='http://journal.giuliamummolo.com/journal/'>journal</a>
+	
+			
+		 <a href="http://journal.giuliamummolo.com/journal/">journal<sup>NEW</sup></a>    
+		 <a href="https://giuliamummolo.com/projects.html">web development</a>
+         <a href="https://giuliamummolo.com/contacts.html">contacts</a>
+         <a href="https://giuliamummolo.com/about.html">about</a>
+         <a href="http://giuliamummolo.com/">home</a>
+		 <a href='https://giuliamummolo.com/files/giulia-mummolo-cv.pdf'>cv</a>
+
 		</div>
 		</div> 
 		<h1>journal</h1>
