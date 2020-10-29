@@ -71,7 +71,7 @@ h3 {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0;
   text-align: justify;
   letter-spacing: 0.0625em;
@@ -107,10 +107,6 @@ button {
   color: #e9e2fb;
 }
 
-button:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-}
 
 /* ----- MAIN MENU SETTINGS---- */
 @media only screen and (min-width: 700px) {
@@ -287,7 +283,7 @@ button:hover {
   }
   .content-paragraph p {
     margin: 1% 20%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: block;
     padding: 0%;
   }
