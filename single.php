@@ -61,9 +61,6 @@
 <?php the_content();?> 
 </div>
 
-<hr>
-
-<h3 id='signature'><span class='animation' id='single-post'></span>gm</h3>
 
 </div>
 <?php
