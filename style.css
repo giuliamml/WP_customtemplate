@@ -681,9 +681,8 @@ button {
   }
   .content-paragraph {
     padding: 2% 10%;
-    text-align: justify;
-    text-justify: inter-word;
   }
+
   .post-date {
     text-align: start;
   }
@@ -696,5 +695,7 @@ button {
 
   .content-paragraph p {
     padding: 2% 0;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
