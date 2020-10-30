@@ -63,7 +63,7 @@
 
 <hr>
 
-<h3><span class='animation' id='single-post'></span>gm</h3>
+<h3 id='signature'><span class='animation' id='single-post'></span>gm</h3>
 
 </div>
 <?php
