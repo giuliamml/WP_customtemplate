@@ -107,7 +107,6 @@ button {
   color: #e9e2fb;
 }
 
-
 /* ----- MAIN MENU SETTINGS---- */
 @media only screen and (min-width: 700px) {
   .menu-main-menu-container {
@@ -286,6 +285,8 @@ button {
     font-size: 1rem;
     display: block;
     padding: 0%;
+    text-align: justify;
+    text-justify: inter-word;
   }
   .single-post-content hr {
     width: 20%;
@@ -552,7 +553,7 @@ button {
   button {
     text-align: end;
   }
-  button:hover{
+  button:hover {
     transform: none;
     transition: none;
   }
@@ -680,6 +681,8 @@ button {
   }
   .content-paragraph {
     padding: 2% 10%;
+    text-align: justify;
+    text-justify: inter-word;
   }
   .post-date {
     text-align: start;
@@ -688,6 +691,7 @@ button {
     padding: 2% 0;
     font-weight: bold;
     font-size: 0.8rem;
+    text-align: start;
   }
 
   .content-paragraph p {

@@ -27,7 +27,7 @@ while (have_posts()) : the_post();
       ?>
 
         <div class="single-post-homepage">
-          <p class='post-date'><?php the_time('F j, Y') ?></p>
+          <p class='post-date'><?php the_time('j.m.y') ?></p>
 
           <?php
           $tag_terms = get_the_terms(get_the_id(), 'post_tag');
