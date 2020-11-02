@@ -657,7 +657,6 @@ button {
   .single-post-homepage {
     position: relative;
     display: grid;
-    grid-template-rows: 2% 8% 60% 25%;
     height: max-content;
   }
 
