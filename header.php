@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class();?>>
@@ -25,12 +26,36 @@
 			</ul> -->
 		</div>
 
+		<script>
+			function menuOpen() {
+
+            let burgerMenu = document.querySelector("div#burger-menu-container");
+            let burgerMenuItems = document.querySelector("div.burger-menu-items");
+
+            burgerMenu.classList.toggle("change");
+
+            if (burgerMenu.className === "") {
+            burgerMenuItems.style.display = "none";
+            } else if (burgerMenu.className === "change") {
+            burgerMenuItems.style.display = 'flex';
+            burgerMenuItems.style.flexDirection = 'column';
+            burgerMenuItems.style.width = '50vw';
+            burgerMenuItems.style.height = '80vh';
+            burgerMenuItems.style.position = 'absolute';
+            burgerMenuItems.style.zIndex = "1";
+			burgerMenuItems.style.background = 'black';
+			burgerMenuItems.style.paddingTop = '20%';
+
+		   }
+	      }
+		</script>
+
 		<div class='header-container-mobile'>
-		<div id="burger-menu-container" onclick="myFunction(this)">
+		<div id="burger-menu-container" onclick="menuOpen()">
          <div class="bar1"></div>
          <div class="bar2"></div>
          <div class="bar3"></div>
-		
+		</div>
 		<div class='burger-menu-items'>
 	
 			
@@ -42,7 +67,6 @@
 		 <a href='https://giuliamummolo.com/files/giulia-mummolo-cv.pdf'>cv</a>
 
 		</div>
-		</div> 
 		<h1>journal</h1>
 		<p>a collection of writings on fashion design, sustainability and tech by GIULIA MUMMOLO</p>
 		</div>

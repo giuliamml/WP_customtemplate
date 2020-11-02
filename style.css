@@ -73,7 +73,6 @@ h3 {
 p {
   font-size: 1rem;
   margin: 0;
-  text-align: justify;
   letter-spacing: 0.0625em;
   color: #fbf5e2;
 }
@@ -285,8 +284,6 @@ button {
     font-size: 1rem;
     display: block;
     padding: 0%;
-    text-align: justify;
-    text-justify: inter-word;
   }
   .single-post-content hr {
     width: 20%;
@@ -542,18 +539,17 @@ button {
     width: 85vw;
     border-top:1px solid #fbf5e2
   }
-  .footer-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    padding:1%;
+
+  footer p{
+    font-size: 0.6rem;
+    padding:0;
+    float: right;
+    margin:1%;
+
   }
-  .footer-container a, img#footer-logo{
-    height: 40px;
-    width: 40px;
-  }
-  .footer-container p{
+  footer a{
     font-size: 0.8rem;
+    color: #fbf5e2;
   }
 }
 
@@ -566,6 +562,7 @@ button {
 
   h2 {
     z-index: 0;
+    text-align: center;
   }
 
   button {
@@ -605,6 +602,7 @@ button {
     position: absolute;
     padding-left: 2%;
     background-color: black;
+    z-index: 111;
   }
 
   .burger-menu-items {
@@ -675,13 +673,10 @@ button {
   .post-details {
     display: flex;
     flex-direction: column;
-    text-align: center;
+
   }
 
-  .post-details h2,
-  p {
-    text-align: center;
-  }
+ 
   a.tag-link {
     font-size: 1.2rem;
     background-color: #ff499e;
@@ -712,25 +707,19 @@ button {
 
   .content-paragraph p {
     padding: 2% 0;
-    text-align: justify;
-    text-justify: inter-word;
+
   }
   footer{
     width: 100vw;
+    border-top: 1px solid #fbf5e2;
   }
-  .footer-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding: 1%;
-    align-items: center;
+ 
+  footer p{
+    font-size:0.6rem;
+    margin:1%;
+    text-align: center;
   }
-  .footer-container a, img#footer-logo{
-    width: 30px;
-    height: 30px;
-    padding:0 5%;
-  }
-  .footer-container p{
-    font-size:0.8rem;
+  footer a{
+    color: #fbf5e2;
   }
 }

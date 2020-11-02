@@ -61,10 +61,10 @@
 <?php the_content();?> 
 </div>
 
-
+<h3 id='signature'><span class='animation' id='single-post'></span>gm</h3>
 </div>
 <?php
   endwhile;
 ?>
 
-<?php get_footer(); ?>
+<!-- <?php get_footer(); ?> -->
