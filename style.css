@@ -121,6 +121,7 @@ button {
     border-right: 1px solid #fbf5e2;
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
 
   header a {
@@ -323,6 +324,7 @@ button {
   .page-container {
     display: grid;
     grid-template-rows: 10% 90%;
+    overflow-y: scroll;
   }
 
   .filtered-post-details {
@@ -535,19 +537,19 @@ button {
   }
 
   /*---FOOTER----*/
-  footer{
+  footer {
     width: 85vw;
-    border-top:1px solid #fbf5e2
+    border-top: 1px solid #fbf5e2;
+    left:15vw;
   }
 
-  footer p{
+  footer p {
     font-size: 0.6rem;
-    padding:0;
+    padding: 0;
     float: right;
-    margin:1%;
-
+    margin: 1%;
   }
-  footer a{
+  footer a {
     font-size: 0.8rem;
     color: #fbf5e2;
   }
@@ -580,7 +582,7 @@ button {
     background-color: black;
   }
 
-  .header-container {
+  .header-container, footer {
     display: none;
   }
 
@@ -639,7 +641,8 @@ button {
     transform: rotate(45deg) translate(0px, -10px);
   }
 
-  .title, #signature {
+  .title,
+  #signature {
     display: none;
   }
 
@@ -657,7 +660,6 @@ button {
   .single-post-homepage {
     position: relative;
     display: grid;
-    height: max-content;
   }
 
   .single-post-homepage a:nth-of-type(2) {
@@ -672,10 +674,11 @@ button {
   .post-details {
     display: flex;
     flex-direction: column;
-
+  }
+  .excerpt-container p {
+    text-align: center;
   }
 
- 
   a.tag-link {
     font-size: 1.2rem;
     background-color: #ff499e;
@@ -706,19 +709,7 @@ button {
 
   .content-paragraph p {
     padding: 2% 0;
+  }
+  
 
-  }
-  footer{
-    width: 100vw;
-    border-top: 1px solid #fbf5e2;
-  }
- 
-  footer p{
-    font-size:0.6rem;
-    margin:1%;
-    text-align: center;
-  }
-  footer a{
-    color: #fbf5e2;
-  }
 }
