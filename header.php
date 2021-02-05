@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
-		
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">	
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class();?>>
@@ -16,16 +17,14 @@
 
     <header>
 		<div class='header-container'>
-		<a id='blog-name' href="https://giuliamummolo.com/"><span class='animation'></span><?php echo get_bloginfo(); ?></a>
-		<a href='https://giuliamummolo.com/'>home</a>
-		<a href='http://journal.giuliamummolo.com/journal/'>journal</a>
-	    <p>a collection of writings on fashion design, sustainability and tech<br> by GIULIA MUMMOLO</p>
-			<!-- <ul class='nav-list'>
-				<?php echo wp_nav_menu('Main Menu'); ?>
-				
-			</ul> -->
-		</div>
+		<a id='blog-name' href="https://journal.decoraedit.com/">
+		<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-square.svg"/>
+		</a>
+	
+		<?php echo wp_nav_menu('Main Menu'); ?>
 
+		</div>
+<!-- 
 		<script>
 			function menuOpen() {
 
@@ -69,7 +68,7 @@
 		</div>
 		<h1>journal</h1>
 		<p>a collection of writings on fashion design, sustainability and tech by GIULIA MUMMOLO</p>
-		</div>
+		</div> -->
 
 	</header>
 

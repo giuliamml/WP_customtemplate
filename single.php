@@ -10,6 +10,8 @@
 
   <div class='single-post-title-text'>
    <h1><?php the_title(); ?></h1>
+   <p><?php the_excerpt(); ?></p>
+
    <!-- tags loop -->
     <?php
     $tag_terms = get_the_terms(get_the_id(), 'post_tag');
@@ -54,14 +56,18 @@
   echo "no image found";
 }
 ?>
-<!-- <?php the_excerpt(); ?>
-<hr> -->
+
+
+
 <div class='content-paragraph'>
 <p id='date'><?php the_time('j.m.y') ?></p>
 <?php the_content();?> 
 </div>
 
-<h3 id='signature'><span class='animation' id='single-post'></span>gm</h3>
+<div class='signature'>
+<p id='signature'>words by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
+</div>
+
 </div>
 <?php
   endwhile;

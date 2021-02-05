@@ -24,6 +24,7 @@
     }
    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+
    // Post Type Key: project
 add_action( 'init', 'create_project_cpt' );
 function create_project_cpt() {

@@ -2,10 +2,8 @@
 
 <?php get_header(); ?>
 
-<div class='page-container'>
-  <div class='title'>
-      <h1>JOURNAL</h1>
-  </div>
+
+
 
  <div class='posts-container'>
    <?php
@@ -27,7 +25,6 @@
    ?>
 
      <div class="single-post-homepage">
-      <p class='post-date'><?php the_time('j.m.y') ?></p>
 
       <?php
           $tag_terms = get_the_terms(get_the_id(), 'post_tag');
@@ -70,6 +67,6 @@
    endwhile;
    ?>
   </div>
-</div>
+
 
 <?php get_footer(); ?>

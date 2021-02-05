@@ -5,16 +5,8 @@
 
 <div class='page-content-wrapper'>
 
-  <h1><?php the_title(); ?></h1>
-  
- <hr>
-  <?php the_content(); ?>
-
-  <hr>
-
-  <h3>.gm</h3>
-
- 
+<h1><?php the_field('purpose_intro') ?></h1>
+ <?php the_content(); ?> 
 </div>
 
 <?php
