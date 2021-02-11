@@ -1,15 +1,16 @@
   <footer>
 
-   <ul class='footer-menu'>
+  <ul class='footer-menu'>
     <li><img id='footer-logo' src="<?php echo get_bloginfo('template_url') ?>/img/logo-square-white.svg"></li>
-    <li><a href="<?php echo site_url('/contacts'); ?>"> contacts </a></li>
-    <li><a href="<?php echo site_url('/purpose'); ?>"> purpose </a></li>
   </ul>
 
-
   <ul class='footer-socials'>
-  <li><h1>Follow @thedecoraedit</h1></li>
+      <li id='socials-heading'>  <h1>Follow @thedecoraedit</h1></li>
      <li><a href='https://www.instagram.com/thedecoraedit/'><img src="<?php echo get_bloginfo('template_url') ?>/img/instagram.svg"></a><p></p></li>
+     <li><a href='https://www.youtube.com/channel/UCErO2r8Y-p0w9lpnxNf8gTg'><img src="<?php echo get_bloginfo('template_url') ?>/img/youtube.svg"></a><p></p></li>
+     <li><a href='https://twitter.com/DecoraEdit'><img src="<?php echo get_bloginfo('template_url') ?>/img/twitter.svg"></a><p></p></li>
+     <li><a href='https://open.spotify.com/show/46rdH5hyIOWbNBE1sfTlrB?si=ac-NP8rrQLaflCeYxE7cWQ'><img src="<?php echo get_bloginfo('template_url') ?>/img/spotify.svg"></a><p></p></li>
+
   </ul>
 
   <p id='theme-link'><a href='https://github.com/giuliamml/WP_customtemplate'>theme</a> designed and built by GIULIA MUMMOLO </p>

@@ -14,8 +14,8 @@
    <?php
    $args = array(
          'post_type' => array('post'),
-         'post_count' => 5,
-         'posts_per_page' => 5,
+         'post_count' => 10,
+         'posts_per_page' => 10,
          'orderby' => 'date',
          'order' => 'DESC'
    );

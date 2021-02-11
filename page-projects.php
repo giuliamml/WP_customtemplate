@@ -2,16 +2,16 @@
 
 <?php get_header(); ?>
 
-<?php
+
+
+<?php 
 while (have_posts()) : the_post();
 ?>
 
-  <div class='page-container'>
-    <div class='title'>
-    <h1><?php the_title(); ?></h1>
-</div>
 
-    <div class='posts-container'>
+    <div class='resources-page-container'>
+    <h1><?php the_title(); ?></h1>
+
       <?php
       $args = array(
         'post_type' => array('project'),
@@ -25,13 +25,14 @@ while (have_posts()) : the_post();
       while ($query->have_posts()) : $query->the_post();
       ?>
 
-        <div class="single-project-page">
+        <div class="single-resource">
+
           
           <?php if (has_post_thumbnail()) {
 
           ?>
           <a href="<?php the_permalink(); ?>">
-            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large'); ?>' />
+            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'medium'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
           <?php
@@ -39,7 +40,7 @@ while (have_posts()) : the_post();
             echo  "<p class=''>no image found</p>";
           }
           ?>
-        <div class='project-details'>
+        <div class='resource-details'>
 
         <?php
             $project_terms = get_the_terms(get_the_id(), 'project-type');
@@ -53,8 +54,8 @@ while (have_posts()) : the_post();
 
           <h2><?php the_title(); ?></h2>
 
-          <!-- <div class='excerpt-container'><?php the_excerpt(); ?></div> -->
-          <button><a href="<?php the_permalink(); ?>">view more ></a></button>
+          <div class='excerpt-container'><?php the_excerpt(); ?></div> 
+          <button><a href="<?php the_permalink(); ?>">discover more</a></button>
         </div>
           
         </div>
@@ -64,10 +65,10 @@ while (have_posts()) : the_post();
       wp_reset_postdata();
       ?>
     </div>
-  </div>
 
 <?php
-endwhile;
-?>
+endwhile; 
+?>  
+
 
 <?php get_footer(); ?>

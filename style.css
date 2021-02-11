@@ -264,7 +264,6 @@ button {
     position: relative;
   }
 
-
   blockquote {
     display: flex;
     background: whitesmoke;
@@ -275,8 +274,6 @@ button {
     background-image: url(./img/quote.svg);
     background-repeat: no-repeat;
   }
-
-  
 
   img#excerpt-img {
     height: 100%;
@@ -344,6 +341,7 @@ button {
     position: relative;
     width: 100%;
     text-align: center;
+    padding: 2% 0;
   }
 
   p#signature {
@@ -387,20 +385,51 @@ button {
   .filtered-post-details {
     margin-top: 3%;
   }
-  
 
   .page-content-wrapper,
   .page-custom-content-wrapper h1 {
     text-align: left;
-    margin:5%;
+    margin: 5% 20%;
   }
 
+  .page-content-wrapper p,
+  .page-content-wrapper h1 {
+    display: block;
+    text-align: left;
+  }
+
+  .page-content-wrapper img {
+    padding: 0;
+    left: 0;
+    transform: none;
+  }
 
   .page-custom-content-wrapper img {
     width: 50%;
     height: 50%;
   }
 
+  /*---- PAGE-PROJECTS SETTINGS -----*/
+
+  .resources-page-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-resource {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5%;
+  }
+
+  .resource-details {
+    padding: 5%;
+  }
+  .resource-details button {
+    padding: 2%;
+    background-color: #d8c5fb;
+    text-transform: uppercase;
+  }
   /*---- ERROR PAGE SETTINGS -----*/
 
   .error-page-container {
@@ -590,7 +619,16 @@ button {
   }
 
   footer li {
-    text-align: left;
+    text-align: center;
+    display: inline;
+  }
+
+  footer ul:nth-of-type(2) {
+    padding-top: 5%;
+  }
+
+  #socials-heading {
+    display: block;
   }
 
   footer p {
@@ -603,9 +641,10 @@ button {
 
   footer h1 {
     color: whitesmoke;
-    font-size: 1.5rem;
-    text-transform: lowercase;
+    font-size: 1rem;
+    text-transform: inherit;
     text-align: left;
+    font-weight: inherit;
   }
 
   footer a {
@@ -615,8 +654,8 @@ button {
   }
 
   footer img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     padding: 0;
     left: 0;
     transform: none;
