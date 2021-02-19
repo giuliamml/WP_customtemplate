@@ -125,7 +125,6 @@ endif;
 
 </div>
 
-<h3><span class='animation' id='single-post'></span>gm</h3>
 
 <?php
   endwhile;

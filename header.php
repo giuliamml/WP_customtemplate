@@ -17,7 +17,7 @@
 
     <header>
 		<div class='header-container'>
-		<a id='blog-name' href="https://journal.decoraedit.com/">
+		<a id='blog-name' href="https://decoraedit.com/">
 		<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-square.svg"/>
 		</a>
 	

@@ -6,10 +6,10 @@
 
   <ul class='footer-socials'>
       <li id='socials-heading'>  <h1>Follow @thedecoraedit</h1></li>
-     <li><a href='https://www.instagram.com/thedecoraedit/'><img src="<?php echo get_bloginfo('template_url') ?>/img/instagram.svg"></a><p></p></li>
-     <li><a href='https://www.youtube.com/channel/UCErO2r8Y-p0w9lpnxNf8gTg'><img src="<?php echo get_bloginfo('template_url') ?>/img/youtube.svg"></a><p></p></li>
-     <li><a href='https://twitter.com/DecoraEdit'><img src="<?php echo get_bloginfo('template_url') ?>/img/twitter.svg"></a><p></p></li>
-     <li><a href='https://open.spotify.com/show/46rdH5hyIOWbNBE1sfTlrB?si=ac-NP8rrQLaflCeYxE7cWQ'><img src="<?php echo get_bloginfo('template_url') ?>/img/spotify.svg"></a><p></p></li>
+     <li><a target="_blank" href='https://www.instagram.com/thedecoraedit/'><img src="<?php echo get_bloginfo('template_url') ?>/img/instagram.svg"></a><p></p></li>
+     <li><a target="_blank" href='https://www.youtube.com/channel/UCErO2r8Y-p0w9lpnxNf8gTg'><img src="<?php echo get_bloginfo('template_url') ?>/img/youtube.svg"></a><p></p></li>
+     <li><a target="_blank" href='https://www.pinterest.co.uk/thedecoraedit/'><img src="<?php echo get_bloginfo('template_url') ?>/img/pinterest.png"></a><p></p></li>
+     <li><a target="_blank" href='https://open.spotify.com/show/46rdH5hyIOWbNBE1sfTlrB?si=ac-NP8rrQLaflCeYxE7cWQ'><img src="<?php echo get_bloginfo('template_url') ?>/img/spotify.svg"></a><p></p></li>
 
   </ul>
 

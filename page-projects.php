@@ -32,7 +32,7 @@ while (have_posts()) : the_post();
 
           ?>
           <a href="<?php the_permalink(); ?>">
-            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'medium'); ?>' />
+            <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'thumbnail'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
           <?php

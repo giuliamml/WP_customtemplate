@@ -33,7 +33,6 @@ body {
   flex-direction: column;
   background-color: #ffead3;
   font-family: "Space Mono", monospace;
-  height: 100vh;
 }
 
 h1 {
@@ -293,6 +292,7 @@ button {
     padding: 1%;
     display: flex;
     flex-direction: column;
+    background-color: #ffead3;
   }
 
   .single-post-title-text h1 {
@@ -332,9 +332,21 @@ button {
     display: block;
     padding: 0%;
   }
+
+  .content-paragraph a, .resource-list a{
+    font-size: 1.2rem;
+  }
   .single-post-content hr {
     width: 20%;
     margin-top: 2%;
+  }
+
+  .resource-list {
+    margin: 1% 20%;
+    font-size: 1rem;
+    display: block;
+    padding: 2%;
+  
   }
 
   .signature {
@@ -812,6 +824,8 @@ button {
     width: 100%;
     position: relative;
   }
+
+
   .single-post-content img {
     height: 350px;
   }

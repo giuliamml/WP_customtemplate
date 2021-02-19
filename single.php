@@ -64,9 +64,42 @@
 <?php the_content();?> 
 </div>
 
+<div class='resource-list'>
+
+  <h2>resources</h2>
+
+ 
+
+  <?php 
+
+  if (have_rows('resources')):
+    while (have_rows('resources')) : the_row();
+
+    $source = get_sub_field('source');
+    $author = get_sub_field('author');
+
+      if (have_rows('title')):
+       while (have_rows('title')) : the_row();
+  
+        $title_value = get_sub_field('value');
+        $title_URL = get_sub_field('link');
+  
+        echo "<a href=$title_URL>$title_value</a>";
+  
+      endwhile;
+      endif;
+    echo "-<p>$source ($author)</p>";
+
+  endwhile;
+  endif;
+  ?>
+
+</div>
+
 <div class='signature'>
 <p id='signature'>words by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
 </div>
+
 
 </div>
 <?php
