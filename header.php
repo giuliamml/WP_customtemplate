@@ -10,6 +10,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class();?>>
@@ -17,11 +20,12 @@
 
     <header>
 		<div class='header-container'>
+		<?php echo wp_nav_menu('Main Menu'); ?>
+
 		<a id='blog-name' href="https://decoraedit.com/">
-		<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-square.svg"/>
+		<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-square-white.svg"/>
 		</a>
 	
-		<?php echo wp_nav_menu('Main Menu'); ?>
 
 		</div>
 <!-- 

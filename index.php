@@ -1,8 +1,36 @@
 <?php /* Template Name: Home */ ?>
 
-<?php get_header(); ?>
 
+ 
+ 
+  <div class='landing-page'>
 
+    <?php get_header(); ?>
+
+    <div class='featured-post'>
+
+       <?php
+       $args = array(
+        'posts_per_page' => 1,
+        'meta_key' => 'meta-checkbox',
+        'meta_value' => 'yes'
+       );
+       $featured = new WP_Query($args);
+ 
+     if ($featured->have_posts()): while($featured->have_posts()): $featured->the_post(); ?>
+      <div class='hero'>
+        <h1><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h1>
+      </div>
+      <?php if (has_post_thumbnail()) : ?>
+      <figure> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a> </figure>    
+    <?php
+      endif;
+      endwhile; else:
+      endif;
+    ?>
+    </div>
+
+  </div>
 
 
  <div class='posts-container'>
@@ -14,8 +42,8 @@
    <?php
    $args = array(
          'post_type' => array('post'),
-         'post_count' => 10,
-         'posts_per_page' => 10,
+         'post_count' => 6,
+         'posts_per_page' => 6,
          'orderby' => 'date',
          'order' => 'DESC'
    );
@@ -67,6 +95,5 @@
    endwhile;
    ?>
   </div>
-
-
+  
 <?php get_footer(); ?>

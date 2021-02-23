@@ -72,8 +72,11 @@
 
   <?php 
 
+  
+
   if (have_rows('resources')):
     while (have_rows('resources')) : the_row();
+
 
     $source = get_sub_field('source');
     $author = get_sub_field('author');
@@ -84,15 +87,17 @@
         $title_value = get_sub_field('value');
         $title_URL = get_sub_field('link');
   
-        echo "<a href=$title_URL>$title_value</a>";
+        echo "<div class='single-post-resource'>
+        <a href=$title_URL>$title_value</a>";
   
       endwhile;
       endif;
-    echo "-<p>$source ($author)</p>";
+    echo " -<p>$source ($author)</p></div>";
 
   endwhile;
   endif;
   ?>
+  
 
 </div>
 
