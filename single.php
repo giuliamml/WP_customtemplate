@@ -1,29 +1,44 @@
+
+<div class='single-post-container'>
+
 <?php get_header(); ?>
+
 
 <?php
   while ( have_posts() ) : the_post();
 ?>
+
+
+
 <div class='single-post-content'>
- 
- 
+
+
+
+  <div class='single-post-landing-page'>
   <img src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large');?>'/>
 
-  <div class='single-post-title-text'>
-   <h1><?php the_title(); ?></h1>
-   <p><?php the_excerpt(); ?></p>
+    <div class='single-post-title-text'>
 
-   <!-- tags loop -->
-    <?php
-    $tag_terms = get_the_terms(get_the_id(), 'post_tag');
-    //function returns terms-item- of category of post, parameters:(id post, type of category/tag/taxonomy)
 
-    if($tag_terms) {
+    <!-- tags loop -->
+      <?php
+      $tag_terms = get_the_terms(get_the_id(), 'post_tag');
+      //function returns terms-item- of category of post, parameters:(id post, type of category/tag/taxonomy)
+
+      if($tag_terms) {
       foreach($tag_terms as $tag_term) {
         echo "<a class='tag-link' href='" . get_term_link($tag_term) . "'>" . '#'. $tag_term->name . "</a> ";
         // print_r($tag_term);
-      }
-    }
-   ?>
+        }
+       }
+    ?>
+
+    <h1><?php the_title(); ?></h1>
+    <hr>
+    <p><?php the_excerpt(); ?></p>
+
+
+   </div>
 
   </div>
 
@@ -102,7 +117,7 @@
 </div>
 
 <div class='signature'>
-<p id='signature'>words by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
+<p id='signature'>words and visual by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
 </div>
 
 
@@ -112,3 +127,5 @@
 ?>
 
 <?php get_footer(); ?> 
+
+</div>

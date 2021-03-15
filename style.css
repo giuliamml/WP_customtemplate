@@ -13,16 +13,20 @@ Text Domain: theme-name
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
+font-family: 'DM Serif Text', serif; for headlines
+font-family: 'Montserrat', sans-serif; for p
+
+
 */
 
 /* -----BASE SETTINGS---- */
 
 body {
   margin: 0;
-  height: 100%;
   box-sizing: border-box;
   background-color: #f5f5f5;
-  font-family: "Space Mono", monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -30,6 +34,7 @@ h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   color: #f5f5f5;
+  font-family: "DM Serif Text", serif;
 }
 
 li {
@@ -49,6 +54,7 @@ h2 {
   z-index: 1111111;
   text-transform: uppercase;
   color: black;
+  font-family: "DM Serif Text", serif;
 }
 
 h3 {
@@ -56,6 +62,7 @@ h3 {
   font-weight: lighter;
   text-align: center;
   color: black;
+  font-family: "DM Serif Text", serif;
 }
 
 p {
@@ -63,6 +70,7 @@ p {
   margin: 0;
   letter-spacing: 0.0625em;
   color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
 blockquote h3 {
@@ -88,7 +96,8 @@ hr {
 button {
   background-color: transparent;
   border: none;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   margin: 5% 0;
   float: right;
   color: #e9e2fb;
@@ -121,6 +130,7 @@ figure {
     position: sticky;
     top: 0;
     z-index: 1111;
+    height: 20%;
   }
 
   header a {
@@ -185,19 +195,26 @@ figure {
     object-fit: cover;
   }
 
+  .landing-page header > .header-container > div#blog-name {
+    background-image: url(./img/logo-square-white.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+  }
+
   .featured-post h1 > a {
     position: relative;
     font-size: 5rem;
     color: #f5f5f5;
     text-transform: none;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "DM Serif Text", serif;
   }
 
   .featured-post h1 {
     position: absolute;
     top: 50%;
     width: 100%;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "DM Serif Text", serif;
   }
 
   .hero {
@@ -219,6 +236,7 @@ figure {
     transform: none;
     height: 100vh;
     width: 100vw;
+    object-fit: cover;
   }
 
   .featured-post {
@@ -237,6 +255,7 @@ figure {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    padding-top: 2%;
   }
 
   .single-post-homepage {
@@ -244,13 +263,38 @@ figure {
     flex-direction: column;
     width: 80%;
     padding: 5% 5%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+    position: relative;
   }
-
 
   .single-post-homepage > a {
     background-color: transparent;
     overflow: hidden;
     height: max-content;
+    display: block;
+  }
+
+  .single-post-homepage:nth-of-type(4) {
+    display: flex;
+    padding: 0;
+    grid-column: 1 / 4;
+    grid-row: 2/ 3;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    padding-top: 1%;
+    height: 80%;
+    justify-self: center;
+  }
+  .single-post-homepage:nth-of-type(4) > img {
+    height: 80%;
+    width: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
   }
 
   img.thumbnail-img {
@@ -259,6 +303,7 @@ figure {
     left: 0;
     transform: none;
     padding: 0;
+    object-fit: cover;
   }
 
   a.tag-link {
@@ -271,11 +316,38 @@ figure {
     transform: translate(-10%, -10%);
   }
 
-  .post-details {
-    width: 90%;
+  .img-hover {
     position: relative;
-    transform: translate(10%, -10%);
+    overflow: hidden;
+  }
+
+  .img-hover a {
+    display: block;
+  }
+
+  .img-hover::after {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .single-post-homepage:hover .img-hover::after {
+    background-color: #d8c5fb88;
+    transform: translateY(-100%);
+  }
+
+  .post-details {
+    width: 100%;
+    position: relative;
+    transform: translate(5%, -5%);
     background-color: #fbf5e2;
+    box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
+  }
+
+  .post-details h2 {
+    padding: 0 5%;
   }
 
   .post-details button > a {
@@ -285,8 +357,6 @@ figure {
 
   .single-post-content,
   .single-project-content {
-    height: 100vh;
-    overflow-y: scroll;
     width: 100%;
     position: relative;
   }
@@ -311,28 +381,47 @@ figure {
     padding-top: 0;
   }
 
+  .single-post-landing-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 2% 0;
+  }
+
+  .single-post-landing-page > img {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    height: 100%;
+    padding: 0;
+  }
+
   .single-post-title-text {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: right;
-    right: 5%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 1%;
     display: flex;
     flex-direction: column;
     background-color: #ffead3;
+    width: 80%;
+    box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
+    opacity: 0.9;
   }
 
   .single-post-title-text h1 {
     padding-bottom: 0%;
     padding-top: 1%;
-    text-align: right;
+    text-align: center;
     padding-left: 0%;
     padding-right: 0%;
     margin-bottom: 0;
     margin-top: 0;
     position: relative;
     top: 50%;
+    color: black;
+    font-size: 3rem;
   }
 
   .single-post-title-text a {
@@ -344,21 +433,22 @@ figure {
     padding: 0;
   }
 
-  .single-post-content img {
-    padding-left: 8%;
-    padding-top: 8%;
+  .single-post-content > .single-post-title-text img {
     left: 0;
     transform: none;
     height: 100%;
+    padding: 0;
   }
   .content-paragraph {
     width: 100%;
+    padding-top: 5%;
   }
   .content-paragraph p {
     margin: 1% 20%;
     font-size: 1rem;
     display: block;
     padding: 0%;
+    text-align: left;
   }
 
   .content-paragraph a,
@@ -403,6 +493,24 @@ figure {
     color: #d8c5fb;
   }
 
+  body.single
+    header
+    > .header-container
+    > .menu-main-menu-container
+    > ul.menu
+    > li
+    > a {
+    color: black;
+  }
+
+  .single-post-container > header > .header-container > div#blog-name,
+  .page-container > header > .header-container > div#blog-name {
+    background-image: url(./img/logo-square.svg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+  }
+
   /*------ FILTERED POSTS SETTINGS --------*/
 
   .single-filtered-post {
@@ -433,18 +541,31 @@ figure {
 
   /*----- PAGE SETTINGS -----*/
 
+  .page-container
+    > header
+    > .header-container
+    > .menu-main-menu-container
+    > ul
+    > li
+    > a {
+    color: black;
+  }
+
   .filtered-post-details {
     margin-top: 3%;
   }
 
-  .page-content-wrapper,
-  .page-custom-content-wrapper h1 {
+  .page-content-wrapper {
     text-align: left;
     margin: 5% 20%;
   }
 
-  .page-content-wrapper p,
-  .page-content-wrapper h1 {
+  .page-custom-content-wrapper h1 {
+    font-size: 4.5rem;
+    text-transform: none;
+  }
+
+  .page-content-wrapper p {
     display: block;
     text-align: left;
   }
@@ -619,6 +740,7 @@ figure {
   p {
     padding: 1%;
     display: inline;
+    text-align: center;
   }
 
   .project-gallery {
@@ -672,10 +794,7 @@ figure {
   footer li {
     text-align: center;
     display: inline;
-  }
-
-  footer ul:nth-of-type(2) {
-    padding-top: 5%;
+    padding: 2%;
   }
 
   #socials-heading {
@@ -696,6 +815,7 @@ figure {
     text-transform: inherit;
     text-align: left;
     font-weight: inherit;
+    font-family: "Space Mono", monospace;
   }
 
   footer a {
@@ -844,6 +964,7 @@ figure {
     height: 100%;
     padding: 0;
   }
+
   .post-details {
     display: flex;
     flex-direction: column;
