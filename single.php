@@ -37,6 +37,7 @@
     <hr>
     <p><?php the_excerpt(); ?></p>
 
+    <?php the_field('video'); ?>
 
    </div>
 
@@ -74,9 +75,11 @@
 
 
 
+
 <div class='content-paragraph'>
 <p id='date'><?php the_time('j.m.y') ?></p>
 <?php the_content();?> 
+
 </div>
 
 <div class='resource-list'>

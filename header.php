@@ -7,15 +7,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap" rel="stylesheet">
-
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class();?>>
@@ -23,13 +19,14 @@
 
     <header>
 		<div class='header-container'>
-		<?php echo wp_nav_menu('Main Menu'); ?>
-		<div id='blog-name'>
-		<a id='blog-name' href="https://decoraedit.com/">
-		<!-- <img src="<?php echo get_bloginfo('template_url') ?>/img/logo-square-white.svg"/> -->
-		</a>
-</div>
-	
+			<div></div>
+			<a id='blog-name' href="<?php echo get_bloginfo() ?>">
+				<img src="<?php echo get_bloginfo('template_url') ?>/img/new-logo.png"/> 
+			</a>
+
+			<?php echo wp_nav_menu('Main Menu'); ?>
+
+
 
 		</div>
 <!-- 
