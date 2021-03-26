@@ -11,6 +11,8 @@
 <div class='posts-container' id='page-journal'>
 
 
+
+
 <?php
 while (have_posts()) : the_post();
 ?>
@@ -28,6 +30,7 @@ $args = array(
 $query = new WP_Query($args);
 while ($query->have_posts()) : $query->the_post();
 ?>
+
 
  <div class="single-post-homepage">
 

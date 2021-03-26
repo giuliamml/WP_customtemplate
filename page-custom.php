@@ -4,7 +4,7 @@
 
 <div class='page-custom-content-wrapper'>
 
-<?php get_header(); ?>
+<?php get_header('secondary'); ?>
 
 <?php
   while ( have_posts() ) : the_post();

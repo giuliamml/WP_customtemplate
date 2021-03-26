@@ -130,10 +130,6 @@ figure {
     position: sticky;
     top: 0;
     z-index: 1111;
-    background-color: #edede2ff;
-    -webkit-box-shadow: 1px 0px 7px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 1px 0px 7px 5px rgba(0, 0, 0, 0.25);
-    padding: 2% 0;
   }
 
   header a {
@@ -188,6 +184,17 @@ figure {
     width: 100%;
     text-align: center;
     padding-left: 0;
+  }
+
+  header#secondary {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1111;
+    background-color: #edede2ff;
+    -webkit-box-shadow: 1px 0px 7px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0px 7px 5px rgba(0, 0, 0, 0.25);
+    padding: 1% 0;
   }
 
   .header-container#secondary li > a {
@@ -276,6 +283,9 @@ figure {
     justify-self: center;
     align-self: center;
     position: relative;
+    height: 80%;
+    width: 70%;
+    object-fit: cover;
   }
 
   .single-post-homepage > a {
@@ -328,7 +338,6 @@ figure {
     padding: 5% 0;
     margin: 0;
     border-bottom: 1px solid #ced7ac;
-    font-size: 1.2rem;
   }
 
   .post-details button > a {
@@ -786,7 +795,7 @@ figure {
   }
 
   footer ul {
-    text-align: start;
+    text-align: center;
   }
 
   footer li {
@@ -803,6 +812,7 @@ figure {
     text-align: center;
     text-transform: uppercase;
     border-top: 1px solid #ced7acff;
+    border-bottom: 1px solid #ced7acff;
     padding: 2% 0;
   }
 
@@ -820,21 +830,6 @@ figure {
     margin: 1%;
     text-decoration: none;
     color: whitesmoke;
-  }
-
-  footer h1 {
-    color: whitesmoke;
-    font-size: 1rem;
-    text-transform: inherit;
-    text-align: left;
-    font-weight: inherit;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  footer a {
-    font-size: 0.8rem;
-    color: whitesmoke;
-    text-decoration: none;
   }
 
   footer img {
@@ -860,7 +855,8 @@ figure {
     text-align: end;
   }
 
-  p#theme-link {
+  p#theme-link,
+  footer a {
     color: #edede2ff;
   }
 

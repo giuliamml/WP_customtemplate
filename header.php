@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
+		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

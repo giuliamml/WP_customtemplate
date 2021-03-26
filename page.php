@@ -1,6 +1,6 @@
 <div class='page-container'>
   
-<?php get_header(); ?>
+<?php get_header('secondary'); ?>
 <?php
   while ( have_posts() ) : the_post();
 ?>
