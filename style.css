@@ -25,7 +25,7 @@ font-family: 'Montserrat', sans-serif; for p
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: #f5f5f5;
+  background-color: #edede2ff;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -154,7 +154,7 @@ figure {
     transform: none;
     text-align: start;
     left: 0;
-    width: 50%;
+    width: 80%;
   }
 
   .header-container-mobile {
@@ -201,6 +201,67 @@ figure {
     color: #32312fff;
   }
 
+  .header-container#secondary a > img {
+    width: 60%;
+  }
+
+  /*------ INSTAGRAM FEED -------*/
+  .wdi_feed_thumbnail_1 .wdi_feed_container {
+    background-color: transparent !important;
+    width: 100vw !important;
+    border: none !important;
+  }
+
+  .wdi_feed_theme_1 .wdi_feed_wrapper {
+    background-color: transparent !important;
+  }
+
+  .wdi_feed_theme_1 .wdi_feed_wrapper .wdi_feed_item {
+    background-color: transparent !important;
+  }
+
+  .wdi_feed_thumbnail_1 .wdi_photo_wrap_inner {
+    border: none !important;
+    background-color: transparent !important;
+    margin: 1% !important;
+  }
+
+  .wdi_pagination {
+    display: none !important;
+  }
+
+  .wdi_header_user_text {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .wdi_single_user {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .wdi_header_user_text h3 {
+    font-size: 2rem !important;
+    color: #32312fff !important;
+    line-height: normal !important;
+  }
+
+  .wdi_header_user_text h3::before {
+    content: "@";
+  }
+
+  .wdi_follow_btn {
+    background-color: transparent !important;
+    border: 1px solid #ced7ac !important;
+    color: #ced7acff !important;
+    border-radius: 30px !important;
+    padding: 1% 5% !important;
+    position: relative !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    left: 50% !important;
+  }
   /*------ HOMEPAGE POST SETTINGS -------*/
 
   .landing-page {
@@ -208,13 +269,6 @@ figure {
     width: 100vw;
     object-fit: cover;
   }
-  /* 
-  .landing-page header > .header-container > div#blog-name {
-    background-image: url(./img/new-logo-white.svg);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
-  } */
 
   .featured-post h1 > a {
     position: relative;
@@ -225,10 +279,7 @@ figure {
   }
 
   .featured-post h1 {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    font-family: "DM Serif Text", serif;
+    display: none;
   }
 
   .hero {
@@ -257,6 +308,13 @@ figure {
     position: absolute;
     top: 0;
     height: 100vh;
+  }
+
+  h1#homepage-quote {
+    color: #32312fff;
+    text-transform: capitalize;
+    font-family: "DM Serif Text", serif;
+    font-size: 3rem;
   }
 
   p.post-date {
@@ -352,14 +410,15 @@ figure {
   }
 
   blockquote {
-    display: flex;
-    background: whitesmoke;
-    margin: 5% 15%;
-    position: relative;
-    display: block;
-    padding: 1%;
-    background-image: url(./img/quote.svg);
-    background-repeat: no-repeat;
+    font-style: italic;
+    margin: 2% 15%;
+    line-height: 1.1875em;
+    font-weight: bolder;
+  }
+
+  blockquote p {
+    font-size: 1.5rem !important;
+    margin: 1% 15% !important;
   }
 
   img#excerpt-img {
@@ -374,30 +433,28 @@ figure {
   .single-post-landing-page {
     height: 100%;
     width: 100%;
-    display: flex;
-    padding: 2% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .single-post-landing-page > img {
-    left: 50%;
     position: relative;
-    transform: translateX(-50%);
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    left: 0;
+    transform: none;
     padding: 0;
   }
 
   .single-post-title-text {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1%;
+    position: relative;
+    background-color: transparent;
+    height: 50%;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    background-color: #ffead3;
-    width: 80%;
-    box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
-    opacity: 0.9;
   }
 
   .single-post-title-text h1 {
@@ -408,19 +465,21 @@ figure {
     padding-right: 0%;
     margin-bottom: 0;
     margin-top: 0;
-    position: relative;
-    top: 50%;
     color: black;
     font-size: 3rem;
+    text-transform: lowercase;
   }
 
   .single-post-title-text a {
-    background-color: #d8c5fb;
-    width: max-content;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: relative;
     transform: none;
     padding: 0;
+    padding: 0.5%;
+    display: inline;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 2%;
   }
 
   .single-post-content > .single-post-title-text img {
@@ -433,17 +492,45 @@ figure {
     width: 100%;
     padding-top: 5%;
   }
+
+  .content-paragraph > p#date {
+    text-align: center;
+    font-style: italic;
+    padding-top: 2%;
+    border-top: 1px solid #ced7acff;
+    letter-spacing: 2px;
+  }
+
+  p#signature {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2% 0;
+  }
+
+  p#signature a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+
   .content-paragraph p {
     margin: 1% 20%;
     font-size: 1rem;
     display: block;
     padding: 0%;
     text-align: left;
+    text-indent: 25px;
+    line-height: 1.5;
+    letter-spacing: 0;
   }
 
   .content-paragraph a,
   .resource-list a {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: black;
+    text-decoration: underline;
   }
   .single-post-content hr {
     width: 20%;
@@ -456,6 +543,12 @@ figure {
     display: flex;
     flex-direction: column;
     padding: 2%;
+    border-top: 1px solid #ced7acff;
+  }
+
+  .resource-list h2 {
+    text-transform: lowercase;
+    font-style: normal;
   }
 
   .single-post-resource {
@@ -473,14 +566,6 @@ figure {
     width: 100%;
     text-align: center;
     padding: 2% 0;
-  }
-
-  p#signature {
-    font-size: 0.8rem;
-  }
-
-  p#signature a {
-    color: #d8c5fb;
   }
 
   body.single
@@ -501,6 +586,29 @@ figure {
     background-position: center;
   }
 
+  .featured-video, .featured-podcast {
+    position: relative;
+    padding: 5% 0;
+  }
+
+  iframe {
+    width: 80%;
+    height: 60%;
+    transform: translateX(-50%);
+    position: relative;
+    right: -50%;
+   
+  }
+
+  #homepage-heading{
+    color: #32312fff;
+    text-transform: capitalize;
+    font-family: "DM Serif Text", serif;
+    font-size: 3rem;
+    text-align: start;
+    padding-left:10%;
+    position: relative;
+  }
   /*------ FILTERED POSTS SETTINGS --------*/
 
   .single-filtered-post {

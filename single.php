@@ -1,7 +1,7 @@
 
 <div class='single-post-container'>
 
-<?php get_header(); ?>
+<?php get_header('secondary'); ?>
 
 
 <?php
@@ -15,10 +15,13 @@
 
 
   <div class='single-post-landing-page'>
-  <img src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large');?>'/>
+    <img src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large');?>'/>
 
     <div class='single-post-title-text'>
 
+    <h1><?php the_title(); ?></h1>
+
+    <hr>
 
     <!-- tags loop -->
       <?php
@@ -31,10 +34,8 @@
         // print_r($tag_term);
         }
        }
-    ?>
+      ?>
 
-    <h1><?php the_title(); ?></h1>
-    <hr>
     <p><?php the_excerpt(); ?></p>
 
     <?php the_field('video'); ?>
@@ -75,9 +76,11 @@
 
 
 
-
 <div class='content-paragraph'>
 <p id='date'><?php the_time('j.m.y') ?></p>
+<p id='signature'>words and visual by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
+
+
 <?php the_content();?> 
 
 </div>
@@ -119,9 +122,6 @@
 
 </div>
 
-<div class='signature'>
-<p id='signature'>words and visual by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
-</div>
 
 
 </div>

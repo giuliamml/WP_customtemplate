@@ -20,7 +20,7 @@
   add_theme_support( 'post-thumbnails' );
 
   function custom_excerpt_length( $length ) {
-    return 10;
+    return 30;
     }
    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -160,10 +160,10 @@ add_filter('excerpt_more', 'new_excerpt_more');
     <div class="sm-row-content">
         <label for="meta-checkbox">
             <input type="checkbox" name="meta-checkbox" id="meta-checkbox" value="yes" <?php if ( isset ( $featured['meta-checkbox'] ) ) checked( $featured['meta-checkbox'][0], 'yes' ); ?> />
-            <?php _e( 'Featured this post', 'sm-textdomain' )?>
-        </label>
-        
+            <?php _e( 'Post to feature', 'sm-textdomain' )?>
+        </label>   
     </div>
+
  </p>
  
     <?php
@@ -194,9 +194,11 @@ function sm_meta_save( $post_id ) {
 
   }
   add_action( 'save_post', 'sm_meta_save' );
+  
 
-
-
-
+  
 
 ?>
+
+
+
