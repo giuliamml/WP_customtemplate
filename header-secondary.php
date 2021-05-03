@@ -19,13 +19,11 @@
 
     <header id='secondary'>
 		<div class='header-container' id='secondary'>
-			<div></div>
-			<a id='blog-name' href="decoraedit.com">
-				<img src="<?php echo get_bloginfo('template_url') ?>/img/new-logo-gr.png"/> 
-			</a>
+				<a id='blog-name' href="https://decoraedit.com/">
+					<img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo-secondary.png"/> 
+				</a>
 
-			<?php echo wp_nav_menu('Main Menu'); ?>
-
+					<?php echo wp_nav_menu('Main Menu'); ?>
 
 		</div>
 

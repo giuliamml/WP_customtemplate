@@ -7,39 +7,57 @@
 
     <?php get_header(); ?>
 
-      <div class='featured-post'>
+    <h1>Decora Edit is a personal exploratory journey of the intersection between fashion and tech.</h1>
 
-        <?php
-        $args = array(
-        'posts_per_page' => 1,
-        'meta_key' => 'meta-checkbox',
-        'meta_value' => 'yes'
-        );
-        $featured = new WP_Query($args);
- 
-        if ($featured->have_posts()): while($featured->have_posts()): $featured->the_post(); ?>
-
-      <div class='hero'>
+    
+    <div id="container">
+      <div id="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+          <defs>
+              <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+          </defs>
+          <circle cx="150" cy="100" r="75" fill="none"/>
+          <g>
+              <use xlink:href="#circlePath" fill="none"/>
+              <text fill="#000">
+                  <textPath xlink:href="#circlePath">Welcome to the Decora Edit • Welcome to the Decora Edit •</textPath>
+              </text>
+          </g>
+      </svg>
+      </div>
       </div>
 
-      <?php if (has_post_thumbnail()) : ?>
+  
 
-      <figure> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a> </figure>    
-      
-      <?php
-      endif;
-      endwhile; else:
-      endif;
-      ?>
-    </div>
 
   </div>
 
-  <h1 id='homepage-quote'>moving the fashion industry towards an ethical ecosystem.</h1>
+      <ul id='homepage-categories-navigation'>
+      <?php
+        $terms = get_terms(
+            array(
+                'taxonomy'   => 'category',
+                'hide_empty' => false,
+            )
+        );
 
+        // Check if any term exists
+        if ( ! empty( $terms ) && is_array( $terms ) ) {
+            // Run a loop and print them all
+            foreach ( $terms as $term ) { ?>
+                <li><a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+                    <?php echo $term->name; ?>
+                </a>
+                </li>
+                <?php
+            }
+        } 
+          
+        ?>
+
+        </ul>
 
  <div class='posts-container'>
-
 
    <?php
    while (have_posts()) : the_post();
@@ -49,8 +67,8 @@
    <?php
    $args = array(
          'post_type' => array('post'),
-         'post_count' => 3,
-         'posts_per_page' => 3,
+         'post_count' => 100,
+         'posts_per_page' => 100,
          'orderby' => 'date',
          'order' => 'DESC'
    );
@@ -88,8 +106,11 @@
 
           <h2><?php the_title(); ?></h2>
 
-  
-       <div class='excerpt-container'><?php the_excerpt(); ?></div> 
+             <hr>
+       <div class='excerpt-container'>
+         <?php the_excerpt(); ?>
+        </div> 
+        <a id='single-post-button' href="<?php the_permalink(); ?>">read more</a>
       </div>
         
     </div>
@@ -107,69 +128,6 @@
 
 </div>
 
-
-
-<div class='featured-video'>
-
-   <h1 id='homepage-heading'>Latest upcycling video</h1>
-        <?php
-        $args = array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'category_name' => 'featured',
-            'posts_per_page' => 1,
-        );
-        $arr_posts = new WP_Query( $args );
-        
-        if ( $arr_posts->have_posts() ) :
-        
-        while ( $arr_posts->have_posts() ) :
-          $arr_posts->the_post();
-        ?>
-
-          <div class="video-content">
-            <?php the_content() ?>
-          </div>
-
-        <?php
-        endwhile;
-        endif;
-        wp_reset_postdata();
-
-        ?>
-
-</div> 
-
-<div class='featured-podcast'>
-
-   <h1 id='homepage-heading'>The Decora Edit Podcast</h1>
-        <?php
-        $args = array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'category_name' => 'podcast',
-            'posts_per_page' => 1,
-        );
-        $arr_posts = new WP_Query( $args );
-        
-        if ( $arr_posts->have_posts() ) :
-        
-        while ( $arr_posts->have_posts() ) :
-          $arr_posts->the_post();
-        ?>
-
-          <div class="podcast-content">
-            <?php the_content() ?>
-          </div>
-
-        <?php
-        endwhile;
-        endif;
-        wp_reset_postdata();
-
-        ?>
-
-</div> 
 
   <?php echo wdi_feed(array('id'=>'1')); ?>
 

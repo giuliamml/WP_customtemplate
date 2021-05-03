@@ -11,7 +11,7 @@
 		<?php wp_head(); ?>
 	</head>
 <body>
-<?php get_header(); ?>
+<?php get_header('secondary'); ?>
 
  <div class='error-page-container'>
 	<h1>page not found <br><span class='animation'></span><span class='animation'></span><span class='animation'></span></h1>

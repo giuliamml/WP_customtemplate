@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('secondary'); ?>
 
 <?php
   $category_id = get_query_var('cat');
@@ -25,13 +25,20 @@
   while($query->have_posts()) : $query->the_post();
 ?>
 
-<div>
-  <img src="<?php echo get_the_post_thumbnail_url(get_the_id(), 'thumbnail'); ?>" alt="">
-  <h2><?php the_title(); ?></h2>
-  <p><?php echo get_the_date(); ?></p>
-  <div><?php the_excerpt(); ?></div>
-  <a href="<?php echo get_the_permalink(); ?>">Read article</a>
-  <hr>
+<div class='filter-categories-container'>
+
+
+  <div class='filter-category-img'>
+    <img src="<?php echo get_the_post_thumbnail_url(get_the_id(), 'large'); ?>" alt="">
+  </div>
+
+  <div class='filter-category-details'>
+    <h1><?php the_title(); ?></h1>
+    <p class='post-date'><?php echo get_the_date(); ?></p>
+    <p><?php the_excerpt(); ?></p>
+    <a href="<?php echo get_the_permalink(); ?>">Read more</a>
+  </div>
+
 </div>
 
 <?php

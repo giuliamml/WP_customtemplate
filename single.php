@@ -78,10 +78,11 @@
 
 <div class='content-paragraph'>
 <p id='date'><?php the_time('j.m.y') ?></p>
-<p id='signature'>words and visual by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
 
 
 <?php the_content();?> 
+<p id='signature'>words and visual by <a href='https://giuliamummolo.com/'>Giulia Mummolo</a></p>
+
 
 </div>
 

@@ -12,48 +12,26 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class();?>>
 	<!--prints the class wp/woocommers need to display -->
 
     <header>
+
 		<div class='header-container'>
-			<div></div>
-			<a id='blog-name' href="<?php echo get_bloginfo() ?>">
-				<img src="<?php echo get_bloginfo('template_url') ?>/img/new-logo.png"/> 
+			<a id='blog-name' href="https://decoraedit.com/">
+				<img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo.png"/> 
 			</a>
 
-			<?php echo wp_nav_menu('Main Menu'); ?>
-
-
+				<?php echo wp_nav_menu('Main Menu'); ?>
 
 		</div>
+
+
 <!-- 
-		<script>
-			function menuOpen() {
-
-            let burgerMenu = document.querySelector("div#burger-menu-container");
-            let burgerMenuItems = document.querySelector("div.burger-menu-items");
-
-            burgerMenu.classList.toggle("change");
-
-            if (burgerMenu.className === "") {
-            burgerMenuItems.style.display = "none";
-            } else if (burgerMenu.className === "change") {
-            burgerMenuItems.style.display = 'flex';
-            burgerMenuItems.style.flexDirection = 'column';
-            burgerMenuItems.style.width = '50vw';
-            burgerMenuItems.style.height = '80vh';
-            burgerMenuItems.style.position = 'absolute';
-            burgerMenuItems.style.zIndex = "1";
-			burgerMenuItems.style.background = 'black';
-			burgerMenuItems.style.paddingTop = '20%';
-
-		   }
-	      }
-		</script>
-
 		<div class='header-container-mobile'>
 		<div id="burger-menu-container" onclick="menuOpen()">
          <div class="bar1"></div>
