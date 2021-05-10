@@ -2,10 +2,10 @@
 
 
  
- 
+  <?php get_header(); ?>
+
   <div class='landing-page'>
 
-    <?php get_header(); ?>
 
     <h1>Decora Edit is a personal exploratory journey of the intersection between fashion and tech.</h1>
 

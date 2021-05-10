@@ -31,27 +31,53 @@
 		</div>
 
 
-<!-- 
+
 		<div class='header-container-mobile'>
-		<div id="burger-menu-container" onclick="menuOpen()">
-         <div class="bar1"></div>
-         <div class="bar2"></div>
-         <div class="bar3"></div>
-		</div>
-		<div class='burger-menu-items'>
-	
-			
-		 <a href="http://journal.giuliamummolo.com/journal/">journal<sup>NEW</sup></a>    
-		 <a href="https://giuliamummolo.com/projects.html">web development</a>
-         <a href="https://giuliamummolo.com/contacts.html">contacts</a>
-         <a href="https://giuliamummolo.com/about.html">about</a>
-         <a href="http://giuliamummolo.com/">home</a>
-		 <a href='https://giuliamummolo.com/files/giulia-mummolo-cv.pdf'>cv</a>
+			<div id="burger-menu-container" onclick="menuOpen()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			</div>
+			<div class='burger-menu-items'>
+
+				<?php echo wp_nav_menu('Main Menu'); ?>
+
+			</div>
+
+			<a id='blog-name' href="https://decoraedit.com/">
+				<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-mobile-dark.png"/> 
+			</a>
+
+			<p>A journey into revisiting the old while enchanting the new. </p>
+
 
 		</div>
-		<h1>journal</h1>
-		<p>a collection of writings on fashion design, sustainability and tech by GIULIA MUMMOLO</p>
-		</div> -->
+
+		<script>
+			function menuOpen() {
+
+            let burgerMenu = document.querySelector("div#burger-menu-container");
+            let burgerMenuItems = document.querySelector("div.burger-menu-items");
+
+            burgerMenu.classList.toggle("change");
+
+            if (burgerMenu.className === "") {
+            burgerMenuItems.style.display = "none";
+            } else if (burgerMenu.className === "change") {
+            burgerMenuItems.style.display = 'flex';
+            burgerMenuItems.style.flexDirection = 'column';
+            burgerMenuItems.style.width = '80vw';
+            burgerMenuItems.style.height = '100vh';
+            burgerMenuItems.style.position = 'absolute';
+            burgerMenuItems.style.zIndex = "1";
+			burgerMenuItems.style.background = '#f7eeed';
+			burgerMenuItems.style.paddingTop = '20%';
+	
+
+
+		   }
+	      }
+		</script>
 
 	</header>
 

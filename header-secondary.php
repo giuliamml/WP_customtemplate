@@ -23,9 +23,56 @@
 					<img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo-secondary.png"/> 
 				</a>
 
-					<?php echo wp_nav_menu('Main Menu'); ?>
+			<?php echo wp_nav_menu('Main Menu'); ?>
 
 		</div>
+
+		<div class='header-container-mobile' id='secondary'>
+
+			<div id="burger-menu-container" onclick="menuOpen()">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+				</div>
+				<div class='burger-menu-items'>
+
+					<?php echo wp_nav_menu('Main Menu'); ?>
+
+				</div>
+
+				<a id='blog-name' href="https://decoraedit.com/">
+					<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-mobile-dark.png"/> 
+				</a>
+
+
+			</div>
+
+			<script>
+				function menuOpen() {
+
+				let burgerMenu = document.querySelector("div#burger-menu-container");
+				let burgerMenuItems = document.querySelector("div.burger-menu-items");
+
+				burgerMenu.classList.toggle("change");
+
+				if (burgerMenu.className === "") {
+				burgerMenuItems.style.display = "none";
+				} else if (burgerMenu.className === "change") {
+				burgerMenuItems.style.display = 'flex';
+				burgerMenuItems.style.flexDirection = 'column';
+				burgerMenuItems.style.width = '80vw';
+				burgerMenuItems.style.height = '80vh';
+				burgerMenuItems.style.position = 'absolute';
+				burgerMenuItems.style.zIndex = "1";
+				burgerMenuItems.style.background = '#f7eeed';
+				burgerMenuItems.style.paddingTop = '20%';
+				burgerMenuItems.style.borderRight = '1px solid black';
+
+			}
+			}
+			</script>
+
+		</div>	
 
 
 	</header>

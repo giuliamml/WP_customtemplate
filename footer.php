@@ -1,6 +1,9 @@
   <footer>
 
-  <div class='footer-wrapper'>
+  <img id='mobile-footer-logo' src="<?php echo get_bloginfo('template_url') ?>/img/logo-mobile-light.png"/> 
+
+
+  <div class='footer-wrapper' >
 
     <div class='footer-menu'>
     <img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo-light.png"/> 
@@ -10,7 +13,7 @@
 
   </div>
 
-    <?php echo wp_nav_menu('Main Menu'); ?>
+  <?php echo wp_nav_menu('Main Menu'); ?>
 
   <div class='theme-link'> 
     <p id='theme-link'><a href='https://github.com/giuliamml/WP_customtemplate'>theme</a> designed and built by GIULIA MUMMOLO </p> 
