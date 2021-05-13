@@ -4,7 +4,7 @@
 
 
 
-<?php 
+<?php
 while (have_posts()) : the_post();
 ?>
 
@@ -29,27 +29,25 @@ while (have_posts()) : the_post();
 
           
           <?php if (has_post_thumbnail()) {
-
           ?>
           <a href="<?php the_permalink(); ?>">
             <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'thumbnail'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
           <?php
-          } else {
-            echo  "<p class=''>no image found</p>";
-          }
+      } else {
+          echo  "<p class=''>no image found</p>";
+      }
           ?>
         <div class='resource-details'>
 
         <?php
             $project_terms = get_the_terms(get_the_id(), 'project-type');
-             if($project_terms) {
-           
-              foreach($project_terms as $project_term) {
-              echo "<a href='" . get_term_link($project_term) . "'>". "#". $project_term->name . "</a> ";
-           }
-          }
+             if ($project_terms) {
+                 foreach ($project_terms as $project_term) {
+                     echo "<a href='" . get_term_link($project_term) . "'>". "#". $project_term->name . "</a> ";
+                 }
+             }
          ?>
 
           <h2><?php the_title(); ?></h2>
@@ -67,7 +65,7 @@ while (have_posts()) : the_post();
     </div>
 
 <?php
-endwhile; 
+endwhile;
 ?>  
 
 

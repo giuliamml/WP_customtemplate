@@ -6,7 +6,7 @@
   <div class='footer-wrapper' >
 
     <div class='footer-menu'>
-    <img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo-light.png"/> 
+    <img src="<?php echo get_bloginfo('template_url') ?>/media/logo-mobile-light.png"/> 
 
     </div>
 

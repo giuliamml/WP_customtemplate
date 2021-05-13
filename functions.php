@@ -1,34 +1,38 @@
 <?php
   //ADD SCRIPTS AND STYLES
   add_action('wp_enqueue_scripts', 'load_theme_scripts_styles');
-  function load_theme_scripts_styles() {
-    if(!is_admin()) {
-      // wp_deregister_script('jquery');
-      //remove prebuilt jquery
+  function load_theme_scripts_styles()
+  {
+      if (!is_admin()) {
+          // wp_deregister_script('jquery');
+          //remove prebuilt jquery
 
-      wp_enqueue_script('main-scripts', get_template_directory_uri() . '/js/main.js', '', '', true );
-      wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/style.css' );
-      //parameters('name of the stylesheet', url .-concat- 'path to stylesheet')
-    }
+          wp_enqueue_script('main-scripts', get_template_directory_uri() . '/js/main.js', '', '', true);
+          wp_enqueue_style('main-styles', get_template_directory_uri() . '/style.css');
+          //parameters('name of the stylesheet', url .-concat- 'path to stylesheet')
+      }
   }
 
   add_action('init', 'register_menus');
-  function register_menus() {
-    register_nav_menu('main-menu', 'Main Menu');
+  function register_menus()
+  {
+      register_nav_menu('main-menu', 'Main Menu');
   }
 
-  add_theme_support( 'post-thumbnails' );
+  add_theme_support('post-thumbnails');
 
-  function custom_excerpt_length( $length ) {
-    return 30;
-    }
-   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+  function custom_excerpt_length($length)
+  {
+      return 30;
+  }
+   add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 
    // Post Type Key: project
-add_action( 'init', 'create_project_cpt' );
-function create_project_cpt() {
-  $labels = array(
+add_action('init', 'create_project_cpt');
+function create_project_cpt()
+{
+    $labels = array(
     'name' => 'Projects',
     'singular_name' => 'Projects',
     'menu_name' => 'Projects',
@@ -58,7 +62,7 @@ function create_project_cpt() {
     'filter_items_list' => 'Filter Projects',
   );
 
-  $args = array(
+    $args = array(
     'label' => 'Projects',
     'description' => '',
     'labels' => $labels,
@@ -79,14 +83,15 @@ function create_project_cpt() {
     'publicly_queryable' => true,
     'capability_type' => 'post',
   );
-  register_post_type( 'project', $args );
-  //function that registers the post type('slug post-type',$variable declared before-arguments )
+    register_post_type('project', $args);
+    //function that registers the post type('slug post-type',$variable declared before-arguments )
 }
 
 // Taxonomy Key: project-type
-add_action( 'init', 'create_project_type_tax' );
-function create_project_type_tax() {
-  $labels = array(
+add_action('init', 'create_project_type_tax');
+function create_project_type_tax()
+{
+    $labels = array(
     'name'              => 'Project Types',
     'singular_name'     => 'Project Type',
     'search_items'      => 'Search Project Types',
@@ -100,9 +105,9 @@ function create_project_type_tax() {
     'menu_name'         => 'Project Types',
   );
 
-  $args = array(
+    $args = array(
     'labels' => $labels,
-    'description' => __( '', 'textdomain' ),
+    'description' => __('', 'textdomain'),
     'hierarchical' => false,
     'public' => true,
     'publicly_queryable' => true,
@@ -117,50 +122,56 @@ function create_project_type_tax() {
     'meta_box_cb' => 'post_categories_meta_box',
   );
 
-  register_taxonomy('project-type', array('project'), $args);
-  //(slug of taxonomy, array of post types should accept that taxonomy,$variable declared previously )
+    register_taxonomy('project-type', array('project'), $args);
+    //(slug of taxonomy, array of post types should accept that taxonomy,$variable declared previously )
 }
 
 // Remove each style one by one
-add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
-function jk_dequeue_styles( $enqueue_styles ) {
-	//unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss (colours, buttons...)
-	//unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout (woocommerce grid)
-	// unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
-	return $enqueue_styles;
+add_filter('woocommerce_enqueue_styles', 'jk_dequeue_styles');
+function jk_dequeue_styles($enqueue_styles)
+{
+    //unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss (colours, buttons...)
+    //unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout (woocommerce grid)
+    // unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+    return $enqueue_styles;
 }
 
 // Or just remove them all in one line
 //add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
-function mytheme_add_woocommerce_support() {
-  add_theme_support( 'woocommerce' );
-  add_theme_support( 'wc-product-gallery-zoom' );
-add_theme_support( 'wc-product-gallery-lightbox' );
-add_theme_support( 'wc-product-gallery-slider' );
- //add support for functionalities desabled
+function mytheme_add_woocommerce_support()
+{
+    add_theme_support('woocommerce');
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
+    //add support for functionalities desabled
 }
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 
-function new_excerpt_more( $more ) {
-  return '';
+function new_excerpt_more($more)
+{
+    return '';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
   //featured post
-  function sm_custom_meta() {
-    add_meta_box( 'sm_meta', __( 'Featured Posts', 'sm-textdomain' ), 'sm_meta_callback', 'post' );
+  function sm_custom_meta()
+  {
+      add_meta_box('sm_meta', __('Featured Posts', 'sm-textdomain'), 'sm_meta_callback', 'post');
   }
-  function sm_meta_callback( $post ) {
-    $featured = get_post_meta( $post->ID );
-    ?>
+  function sm_meta_callback($post)
+  {
+      $featured = get_post_meta($post->ID); ?>
  
 	<p>
     <div class="sm-row-content">
         <label for="meta-checkbox">
-            <input type="checkbox" name="meta-checkbox" id="meta-checkbox" value="yes" <?php if ( isset ( $featured['meta-checkbox'] ) ) checked( $featured['meta-checkbox'][0], 'yes' ); ?> />
-            <?php _e( 'Post to feature', 'sm-textdomain' )?>
+            <input type="checkbox" name="meta-checkbox" id="meta-checkbox" value="yes" <?php if (isset($featured['meta-checkbox'])) {
+          checked($featured['meta-checkbox'][0], 'yes');
+      } ?> />
+            <?php _e('Post to feature', 'sm-textdomain')?>
         </label>   
     </div>
 
@@ -168,32 +179,32 @@ add_filter('excerpt_more', 'new_excerpt_more');
  
     <?php
   }
-  add_action( 'add_meta_boxes', 'sm_custom_meta' );
+  add_action('add_meta_boxes', 'sm_custom_meta');
 
   /**
  * Saves the custom meta input
  */
-function sm_meta_save( $post_id ) {
+function sm_meta_save($post_id)
+{
  
   // Checks save status
-  $is_autosave = wp_is_post_autosave( $post_id );
-  $is_revision = wp_is_post_revision( $post_id );
-  $is_valid_nonce = ( isset( $_POST[ 'sm_nonce' ] ) && wp_verify_nonce( $_POST[ 'sm_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+    $is_autosave = wp_is_post_autosave($post_id);
+    $is_revision = wp_is_post_revision($post_id);
+    $is_valid_nonce = (isset($_POST[ 'sm_nonce' ]) && wp_verify_nonce($_POST[ 'sm_nonce' ], basename(__FILE__))) ? 'true' : 'false';
 
-  // Exits script depending on save status
-  if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
-      return;
-  }
+    // Exits script depending on save status
+    if ($is_autosave || $is_revision || !$is_valid_nonce) {
+        return;
+    }
 
-// Checks for input and saves
-  if( isset( $_POST[ 'meta-checkbox' ] ) ) {
-  update_post_meta( $post_id, 'meta-checkbox', 'yes' );
-  } else {
-  update_post_meta( $post_id, 'meta-checkbox', '' );
-  } 
-
-  }
-  add_action( 'save_post', 'sm_meta_save' );
+    // Checks for input and saves
+    if (isset($_POST[ 'meta-checkbox' ])) {
+        update_post_meta($post_id, 'meta-checkbox', 'yes');
+    } else {
+        update_post_meta($post_id, 'meta-checkbox', '');
+    }
+}
+  add_action('save_post', 'sm_meta_save');
   
 
 

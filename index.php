@@ -7,7 +7,7 @@
   <div class='landing-page'>
 
 
-    <h1>Decora Edit is a personal exploratory journey of the intersection between fashion and tech.</h1>
+    <h1>A journey into revisiting the old while enchanting the new.</h1>
 
     
     <div id="container">
@@ -35,23 +35,23 @@
       <ul id='homepage-categories-navigation'>
       <?php
         $terms = get_terms(
-            array(
+    array(
                 'taxonomy'   => 'category',
                 'hide_empty' => false,
             )
-        );
+);
 
         // Check if any term exists
-        if ( ! empty( $terms ) && is_array( $terms ) ) {
+        if (! empty($terms) && is_array($terms)) {
             // Run a loop and print them all
-            foreach ( $terms as $term ) { ?>
-                <li><a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+            foreach ($terms as $term) { ?>
+                <li><a href="<?php echo esc_url(get_term_link($term)) ?>">
                     <?php echo $term->name; ?>
                 </a>
                 </li>
                 <?php
             }
-        } 
+        }
           
         ?>
 
@@ -82,26 +82,25 @@
  
      
       <?php if (has_post_thumbnail()) {
-
-          ?>
+       ?>
           <a href="<?php the_permalink(); ?>">
             <img class='thumbnail-img' src='<?php echo get_the_post_thumbnail_url(get_the_id(), 'large'); ?>' />
             <!--parameters: (id, size of the img -thumbnail, medium, large-) -->
           </a>
 
           <?php
-          } else {
-            echo  "<p class=''>no image found</p>";
-          }
+   } else {
+       echo  "<p class=''>no image found</p>";
+   }
       ?>
       <div class='post-details'>
           <?php
             $tag_terms = get_the_terms(get_the_id(), 'post_tag');
-            if($tag_terms) {
-            foreach($tag_terms as $tag_term) {
-            echo "<a class='tag-link' href='" . get_term_link($tag_term) . "'>" . "#". $tag_term->name . "</a> ";
-              }
-             }
+            if ($tag_terms) {
+                foreach ($tag_terms as $tag_term) {
+                    echo "<a class='tag-link' href='" . get_term_link($tag_term) . "'>" . "#". $tag_term->name . "</a> ";
+                }
+            }
           ?>
 
           <h2><?php the_title(); ?></h2>

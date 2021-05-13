@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg">
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+		<title><?php wp_title(''); ?><?php if (wp_title('', false)) {
+    echo ' :';
+} ?> <?php bloginfo('name'); ?></title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -23,7 +25,7 @@
 
 		<div class='header-container'>
 			<a id='blog-name' href="https://decoraedit.com/">
-				<img src="<?php echo get_bloginfo('template_url') ?>/img/decora-logo.png"/> 
+				<img src="<?php echo get_bloginfo('template_url') ?>/media/logo-mobile-dark.png"/> 
 			</a>
 
 				<?php echo wp_nav_menu('Main Menu'); ?>
@@ -45,7 +47,7 @@
 			</div>
 
 			<a id='blog-name' href="https://decoraedit.com/">
-				<img src="<?php echo get_bloginfo('template_url') ?>/img/logo-mobile-dark.png"/> 
+				<img src="<?php echo get_bloginfo('template_url') ?>/media/logo-mobile-dark.png"/> 
 			</a>
 
 			<p>A journey into revisiting the old while enchanting the new. </p>

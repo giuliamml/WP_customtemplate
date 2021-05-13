@@ -22,7 +22,7 @@
   );
 
   $query = new WP_Query($args);
-  while($query->have_posts()) : $query->the_post();
+  while ($query->have_posts()) : $query->the_post();
 ?>
 
 <div class='filter-categories-container'>
