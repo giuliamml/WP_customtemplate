@@ -50,7 +50,8 @@
 				<img src="<?php echo get_bloginfo('template_url') ?>/media/logo-mobile-dark.png"/> 
 			</a>
 
-			<p>A journey into revisiting the old while enchanting the new. </p>
+			<p>An edit on revisiting the old while enchanting the new.
+			</p>
 
 
 		</div>

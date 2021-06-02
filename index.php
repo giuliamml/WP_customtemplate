@@ -7,7 +7,9 @@
   <div class='landing-page'>
 
 
-    <h1>A journey into revisiting the old while enchanting the new.</h1>
+    <h1>A journey into revisiting the old while enchanting the new. </br>
+    <span>Sharing some love for second-hand finds and tips on conscious consumerism, with a hint of data-driven perspectives.</span></h1>
+
 
     
     <div id="container">

@@ -22,7 +22,7 @@
     <header id='secondary'>
 		<div class='header-container' id='secondary'>
 				<a id='blog-name' href="https://decoraedit.com/">
-					<img src="<?php echo get_bloginfo('template_url') ?>/media/decora-logo-secondary.png"/> 
+					<img src="<?php echo get_bloginfo('template_url') ?>/media/logo-secondary.png"/> 
 				</a>
 
 			<?php echo wp_nav_menu('Main Menu'); ?>

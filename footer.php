@@ -1,12 +1,12 @@
   <footer>
 
-  <img id='mobile-footer-logo' src="<?php echo get_bloginfo('template_url') ?>/img/logo-mobile-light.png"/> 
+  <img id='mobile-footer-logo' src="<?php echo get_bloginfo('template_url') ?>/media/logo-secondary-light.png"/> 
 
 
   <div class='footer-wrapper' >
 
     <div class='footer-menu'>
-    <img src="<?php echo get_bloginfo('template_url') ?>/media/logo-mobile-light.png"/> 
+    <img src="<?php echo get_bloginfo('template_url') ?>/media/logo-secondary-light.png"/> 
 
     </div>
 
