@@ -1320,18 +1320,26 @@ figure {
 
   div.theme-link {
     position: relative;
-    width: 100%;
-    text-align: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   p#theme-link,
   footer a {
     color: #f7eeed;
+    text-align: end;
+    align-self: center;
   }
 
   #theme-link a {
     text-decoration: underline;
     color: #f7eeed;
+  }
+
+  .social-icons img {
+    width: 10%;
+    left: 0;
+    position: relative;
   }
 }
 
@@ -1370,6 +1378,10 @@ figure {
     top: 0;
     z-index: 11111;
     background-color: #f7eeed;
+  }
+
+  iframe {
+    width: 100% !important;
   }
 
   .header-container {
