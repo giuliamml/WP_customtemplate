@@ -34,6 +34,5 @@
   <?php wp_footer(); ?>
 
 </body>
-<script async defer data-domain="decoraedit.com" src="https://plausible.io/js/plausible.js"></script>
 
 </html>

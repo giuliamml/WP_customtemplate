@@ -778,6 +778,11 @@ figure {
     letter-spacing: 0;
   }
 
+  .content-paragraph img {
+    height: auto;
+    width: 100%;
+  }
+
   .content-paragraph a,
   .resource-list a {
     font-size: 1rem;

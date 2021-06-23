@@ -16,7 +16,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet"> 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+		<script defer data-domain="decoraedit.com" src="https://plausible.io/js/plausible.js"></script>
 		<?php wp_head(); ?>
+		
 	</head>
 	<body <?php body_class();?>>
 	<!--prints the class wp/woocommers need to display -->
